@@ -1,4 +1,4 @@
-# 🌐 Network Engineering Journey
+# Network Engineering Journey
 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 ![Lang](https://img.shields.io/badge/Language-Français-blue)
@@ -6,7 +6,7 @@
 
 > **Note :** Ce dépôt documente mon apprentissage des réseaux informatiques durant ma 2ème année de cycle préparatoire ingénieur. Il contient des explications théoriques reformulées, des schémas et des scripts d'implémentation.
 
-## 🎯 Objectifs du dépôt
+## Objectifs du dépôt
 
 L'objectif est de déconstruire et comprendre le fonctionnement d'Internet et des réseaux locaux, de la couche physique à la couche application.
 
@@ -14,7 +14,7 @@ L'objectif est de déconstruire et comprendre le fonctionnement d'Internet et de
 * 💻 **Pratique :** Scripts (Python/Bash) pour illustrer la théorie (Sockets, Subnetting).
 * 🧠 **Ressource :** Créer une "Cheat Sheet" durable pour mes futures années d'ingénieur.
 
-## 🗺️ Roadmap & Progression
+## Roadmap & Progression
 
 Je m'appuie sur une approche "Step-by-Step" pour couvrir les fondamentaux.
 
@@ -27,13 +27,13 @@ Je m'appuie sur une approche "Step-by-Step" pour couvrir les fondamentaux.
 | **05** | **Couche Transport** | ⏳ | TCP vs UDP, Ports, Sockets |
 | **06** | **Couche Application** | ⏳ | HTTP, DNS, DHCP, SSH |
 
-## 🛠️ Outils & Technologies
+## Outils & Technologies
 
 * **Langages :** Python (Scripts réseau), C (Bas niveau), Bash.
 * **Outils :** Wireshark (Analyse de paquets), Packet Tracer (Simulation).
 * **Documentation :** Markdown, Mermaid.js (Diagrammes).
 
-## 📂 Structure du projet
+## Structure du projet
 
 ```text
 .
