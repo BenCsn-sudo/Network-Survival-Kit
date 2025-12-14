@@ -44,7 +44,7 @@ Technologie radio courte distance utilisant la bande de fréquence 2.4 GHz.
     * **Piconet :** Un réseau formé par un maître et jusqu'à 7 esclaves actifs.
     * **Scatternet :** Interconnexion de plusieurs Piconets (un esclave peut être maître ailleurs).
 
-![Schéma Piconet vs Scatternet](https://www.researchgate.net/profile/Jari-Porras/publication/277287338/figure/fig2/AS:669499388870665@1536632501387/Bluetooth-piconet-and-scatternet.png)
+![Schéma Piconet vs Scatternet](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3Miz94wiyXq_QSPoYQ9QJxK0-AGtMkqw3A&s)
 *(Exemple de structure Piconet/Scatternet)*
 
 | Classe Bluetooth | Puissance | Portée estimée | Usage typique |
