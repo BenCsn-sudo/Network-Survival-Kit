@@ -89,10 +89,7 @@ C'est le composant fondamental : sans elle, aucune communication n'est possible.
 > 💡 **Le saviez-vous ?** Une clé Wi-Fi USB est techniquement une carte réseau externe. Qu'elle soit branchée en USB ou via un port PCI sur la carte mère, son rôle est identique.
 
 <div align="center">
-  <img src="
-
-http://googleusercontent.com/image_collection/image_retrieval/12152831530167822589_0
-" width="400" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/GB_Network_PCI_Card.jpg" width="400" />
   <br>
   <i>(Exemple d'une carte réseau au format PCI)</i>
   <br><br>
@@ -115,10 +112,7 @@ Le Switch est l'évolution intelligente du Hub (Couche 2 du modèle OSI).
 * **Résultat :** Plus de sécurité et de bien meilleures performances (fin des collisions).
 
 <div align="center">
-  <img src="
-
-http://googleusercontent.com/image_collection/image_retrieval/15867765261929394561_0
-" width="600" />
+  <img src="http://googleusercontent.com/image_collection/image_retrieval/15867765261929394561_0" width="600" />
   <br>
   <i>(Différence de flux de données : Hub vs Switch)</i>
   <br><br>
@@ -132,10 +126,7 @@ Si le Switch crée un réseau, le Routeur relie **différents** réseaux entre e
 * **À la maison :** Votre "Box" internet est en réalité un routeur qui possède aussi un switch intégré (les 4 ports derrière) et un point d'accès Wi-Fi.
 
 <div align="center">
-  <img src="
-
-http://googleusercontent.com/image_collection/image_retrieval/16025281296229448166_0
-" width="400" />
+  <img src="http://googleusercontent.com/image_collection/image_retrieval/16025281296229448166_0" width="400" />
   <br>
   <i>(Un routeur Wi-Fi moderne typique)</i>
   <br><br>
