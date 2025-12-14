@@ -49,7 +49,7 @@ Technologie radio courte distance utilisant la bande de fréquence 2.4 GHz.
   <br>
   <i>(Exemple de structure Piconet/Scatternet)</i>
 </div>
-
+  
 
 | Classe Bluetooth | Puissance | Portée estimée | Usage typique |
 | :---: | :---: | :---: | :--- |
