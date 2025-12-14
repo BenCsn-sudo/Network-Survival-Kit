@@ -229,7 +229,7 @@ Chaque machine est reliée à toutes les autres (Full Mesh) ou à plusieurs autr
 * **Usage réel :** On l'utilise pour le "Backbone" d'Internet (les gros routeurs) pour qu'Internet ne coupe jamais, mais on fait du maillage partiel.
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/NetworkTopologies.svg/1000px-NetworkTopologies.svg.png" width="600" />
+  <img src="https://www.aquaportail.com/pictures2203/topologie-de-reseau.jpg" width="600" />
   <br>
   <i>(Synthèse visuelle des topologies)</i>
   <br><br>
