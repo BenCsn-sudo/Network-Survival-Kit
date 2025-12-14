@@ -149,3 +149,94 @@ Le signal réseau s'affaiblit avec la distance (atténuation). Le répéteur ser
 | **Switch** | 2 (Liaison) | Moyenne | Connecter plusieurs PC intelligemment (utilise l'adresse MAC). |
 | **Routeur** | 3 (Réseau) | Élevée | Connecter des réseaux différents (LAN ↔ Internet). |
 | **Répéteur** | 1 (Physique) | Nulle | Étendre la portée du signal (Régénération). |
+
+---
+
+## 4. Échelles et Topologies
+
+Avant de dessiner un réseau, il faut comprendre son étendue géographique et sa forme.
+
+### 🌍 Les Types de Réseaux (Échelle)
+
+On classe généralement les réseaux selon la distance qui sépare les équipements.
+
+#### LAN (Local Area Network)
+C'est un réseau limité à une zone géographique restreinte (une maison, un bâtiment, un campus).
+* **Technologies :** Ethernet, Wi-Fi (on parle alors de **WLAN**).
+* **Vitesse :** Très rapide (1 Gbps à 10 Gbps).
+* **Gestion :** Privée (géré par vous ou l'entreprise).
+
+#### WAN (Wide Area Network)
+C'est un réseau étendu qui couvre de grandes distances (pays, continent). Il sert à interconnecter plusieurs LAN.
+* **Technologies :** Fibre optique longue distance, 4G/5G, Satellite, MPLS.
+* **Vitesse :** Variable, souvent plus lente que le LAN.
+* **Gestion :** Publique ou louée à des opérateurs (FAI).
+
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/LANWAN.svg/1200px-LANWAN.svg.png" width="500" />
+  <br>
+  <i>(LAN vs WAN : Le WAN connecte les LANs entre eux)</i>
+  <br><br>
+</div>
+
+---
+
+### 📐 Les Topologies : Physique vs Logique
+
+C'est une distinction fondamentale à comprendre pour un ingénieur réseau.
+
+* **Topologie Physique :** C'est le câblage réel. Comment les machines sont reliées physiquement (la forme des câbles dans les murs).
+* **Topologie Logique :** C'est la manière dont le signal circule. Comment les données "voient" le réseau.
+
+> **Exemple clé :** Si vous branchez des PC sur un **Hub**, vous avez une étoile physique (tous les câbles vont au Hub), mais un bus logique (le signal est envoyé à tout le monde comme dans un bus).
+
+### 🚌 Topologie en Bus
+Tous les ordinateurs sont connectés à un seul câble central (souvent coaxial) appelé le segment.
+
+* **Fonctionnement :** Le signal parcourt tout le câble. Il faut des **bouchons de terminaison** (terminateurs) aux extrémités pour éviter que le signal ne rebondisse (réflexion).
+* **Problème majeur :**
+    * Si le câble coupe à un endroit, **tout le réseau tombe**.
+    * **Collisions :** Si deux personnes parlent en même temps, les données se percutent. On utilise le protocole **CSMA/CD** pour gérer ça.
+
+### ⭐ Topologie en Étoile (Star)
+C'est le standard actuel (Ethernet moderne). Tout le monde est relié à un point central (Switch).
+
+* **Avantages :** Si un câble casse, seul l'ordinateur concerné est déconnecté. Le reste du réseau fonctionne.
+* **Inconvénient :** Le point central est un **SPOF** (Single Point of Failure). Si le Switch meurt, plus personne ne communique.
+
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/eb/Star_Topology.png/440px-Star_Topology.png" width="300" />
+  <br>
+  <i>(Topologie en étoile : la plus courante)</i>
+  <br><br>
+</div>
+
+### 💍 Topologie en Anneau (Ring)
+Les machines sont reliées en boucle fermée.
+* **Fonctionnement (Token Ring) :** Un jeton (Token) circule d'ordinateur en ordinateur.
+    * Celui qui a le jeton a le droit de parler.
+    * Quand il a fini, il passe le jeton au voisin.
+* **Avantage :** Aucune collision ! C'est une méthode **déterministe**.
+* **Inconvénient :** Si une machine plante (et ne passe pas le jeton), l'anneau est brisé (sauf s'il y a un double anneau de secours comme en FDDI).
+
+### 🕸️ Topologie Maillée (Mesh)
+Chaque machine est reliée à toutes les autres (Full Mesh) ou à plusieurs autres (Partial Mesh).
+
+* **Le Full Mesh (Intégral) :**
+    * **Sécurité maximale :** Si un lien casse, il y en a toujours un autre.
+    * **Calcul du nombre de câbles :** Pour $n$ machines, il faut $\frac{n(n-1)}{2}$ câbles.
+    * *Exemple :* Pour 500 ordis, il faudrait 124 750 câbles ! C'est impossible à gérer pour des PC.
+* **Usage réel :** On l'utilise pour le "Backbone" d'Internet (les gros routeurs) pour qu'Internet ne coupe jamais, mais on fait du maillage partiel.
+
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/NetworkTopologies.svg/1000px-NetworkTopologies.svg.png" width="600" />
+  <br>
+  <i>(Synthèse visuelle des topologies)</i>
+  <br><br>
+</div>
+
+### 🧬 Topologie Hybride
+C'est la réalité du terrain. Internet est un réseau hybride : des étoiles (vos maisons), reliées par des boucles ou des maillages (les opérateurs).
+
+---
+*Prochain chapitre : Protocoles, Modèle OSI et Encapsulation !*
