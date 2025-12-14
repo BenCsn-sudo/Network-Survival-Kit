@@ -112,7 +112,7 @@ Le Switch est l'évolution intelligente du Hub (Couche 2 du modèle OSI).
 * **Résultat :** Plus de sécurité et de bien meilleures performances (fin des collisions).
 
 <div align="center">
-  <img src="http://googleusercontent.com/image_collection/image_retrieval/15867765261929394561_0" width="600" />
+  <img src="https://content.pearl.fr/media/cache/default/article_ultralarge_high_nocrop/shared/images/articles/T/TG3/switch-reseau-gigabit-ethernet-24-ports-gs234v2-ref_TG3134_2.jpg" width="600" />
   <br>
   <i>(Différence de flux de données : Hub vs Switch)</i>
   <br><br>
@@ -126,7 +126,7 @@ Si le Switch crée un réseau, le Routeur relie **différents** réseaux entre e
 * **À la maison :** Votre "Box" internet est en réalité un routeur qui possède aussi un switch intégré (les 4 ports derrière) et un point d'accès Wi-Fi.
 
 <div align="center">
-  <img src="http://googleusercontent.com/image_collection/image_retrieval/16025281296229448166_0" width="400" />
+  <img src="https://dropinblog.net/34253577/files/featured/composants-routeur-3.png" width="400" />
   <br>
   <i>(Un routeur Wi-Fi moderne typique)</i>
   <br><br>
