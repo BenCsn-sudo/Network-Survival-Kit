@@ -45,10 +45,11 @@ Technologie radio courte distance utilisant la bande de fréquence 2.4 GHz.
     * **Scatternet :** Interconnexion de plusieurs Piconets (un esclave peut être maître ailleurs).
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Piconet_and_scatternet.svg/1200px-Piconet_and_scatternet.svg.png" width="600" />
+  <img src="https://www.tutorialspoint.com/assets/questions/media/56586/scatternet1.jpg" width="600" />
   <br>
   <i>(Exemple de structure Piconet/Scatternet)</i>
 </div>
+
 
 | Classe Bluetooth | Puissance | Portée estimée | Usage typique |
 | :---: | :---: | :---: | :--- |
