@@ -173,7 +173,7 @@ C'est un réseau étendu qui couvre de grandes distances (pays, continent). Il s
 * **Gestion :** Publique ou louée à des opérateurs (FAI).
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/LANWAN.svg/1200px-LANWAN.svg.png" width="500" />
+  <img src="https://www.lafibrelyonnaise.fr/wp-content/uploads/2022/04/Que-signifie-et-quel-est-lobjectif-du-WAN-ou-reseau-etendu-en-informatique.jpg" width="500" />
   <br>
   <i>(LAN vs WAN : Le WAN connecte les LANs entre eux)</i>
   <br><br>
@@ -205,7 +205,7 @@ C'est le standard actuel (Ethernet moderne). Tout le monde est relié à un poin
 * **Inconvénient :** Le point central est un **SPOF** (Single Point of Failure). Si le Switch meurt, plus personne ne communique.
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/eb/Star_Topology.png/440px-Star_Topology.png" width="300" />
+  <img src="https://zestedesavoir.com/media/galleries/5382/aae26575-30b8-46e4-8fe2-13bb42d5fa96.png" width="300" />
   <br>
   <i>(Topologie en étoile : la plus courante)</i>
   <br><br>
