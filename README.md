@@ -42,4 +42,4 @@ Je m'appuie sur une approche "Step-by-Step" pour couvrir les fondamentaux.
 ├── scripts/                # Outils d'automatisation et snippets
 └── ressources/             # Schémas et mémos
 `````
----**Note :** Ce dépôt documente mon apprentissage des réseaux informatiques durant ma 2ème année de cycle préparatoire ingénieur. Il contient des explications théoriques reformulées, des schémas et des scripts d'implémentation.
+**🤖 Note de transparence :** La structure pédagogique et le fond des explications de ce dépôt sont intégralement conçus par l'auteur. Des outils d'IA sont utilisés uniquement à titre d'assistance pour l'optimisation du formatage Markdown, la clarté de la mise en page et la correction orthographique.
