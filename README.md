@@ -1,12 +1,3 @@
-C'est une excellente initiative. La transparence est une qualité très appréciée (l'honnêteté intellectuelle est une valeur clé en ingénierie). De plus, cela montre que tu sais utiliser l'IA comme un **outil de productivité** (pour la forme) et non comme un outil de remplacement (pour le fond).
-
-Voici le fichier `README.md` complet et mis à jour avec cette note formulée de manière professionnelle en bas de page.
-
------
-
-### Fichier : `README.md` (Racine du projet)
-
-````markdown
 # 🌐 Network Engineering Journey
 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
@@ -50,8 +41,5 @@ Je m'appuie sur une approche "Step-by-Step" pour couvrir les fondamentaux.
 ├── 02-architecture/        # OSI & TCP/IP
 ├── scripts/                # Outils d'automatisation et snippets
 └── ressources/             # Schémas et mémos
-````
-
------
-
-> **🤖 Note de transparence :** La structure pédagogique et le fond des explications de ce dépôt sont intégralement conçus par l'auteur. Des outils d'IA sont utilisés uniquement à titre d'assistance pour l'optimisation du formatage Markdown, la clarté de la mise en page et la correction orthographique.
+`````
+---**Note :** Ce dépôt documente mon apprentissage des réseaux informatiques durant ma 2ème année de cycle préparatoire ingénieur. Il contient des explications théoriques reformulées, des schémas et des scripts d'implémentation.
