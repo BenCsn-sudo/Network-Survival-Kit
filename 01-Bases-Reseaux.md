@@ -47,7 +47,7 @@ Technologie radio courte distance utilisant la bande de fréquence 2.4 GHz.
 <div align="center">
   <img src="https://www.tutorialspoint.com/assets/questions/media/56586/scatternet1.jpg" width="600" />
   <br>
-  <i>(Exemple de structure Piconet/Scatternet)</i>
+  <i>(Exemple de structure Piconet/Scatternet)</i>  
 </div>
   
 
