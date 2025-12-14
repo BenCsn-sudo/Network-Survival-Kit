@@ -45,7 +45,7 @@ Technologie radio courte distance utilisant la bande de fréquence 2.4 GHz.
     * **Scatternet :** Interconnexion de plusieurs Piconets (un esclave peut être maître ailleurs).
 
 <div align="center">
-  <img src="https://www.tutorialspoint.com/assets/questions/media/56586/scatternet1.jpg" width="600" />
+  <img src="https://www.tutorialspoint.com/assets/questions/media/56586/scatternet1.jpg" width="400" />
   <br>
   <i>(Exemple de structure Piconet/Scatternet)</i>
    <br>
@@ -126,7 +126,7 @@ Si le Switch crée un réseau, le Routeur relie **différents** réseaux entre e
 * **À la maison :** Votre "Box" internet est en réalité un routeur qui possède aussi un switch intégré (les 4 ports derrière) et un point d'accès Wi-Fi.
 
 <div align="center">
-  <img src="https://dropinblog.net/34253577/files/featured/composants-routeur-3.png" width="400" />
+  <img src="https://dropinblog.net/34253577/files/featured/composants-routeur-3.png" width="600" />
   <br>
   <i>(Un routeur Wi-Fi moderne typique)</i>
   <br><br>
