@@ -145,7 +145,7 @@ Le signal réseau s'affaiblit avec la distance (atténuation). Le répéteur ser
 | Équipement | Couche OSI | Intelligence | Rôle principal |
 | :--- | :---: | :--- | :--- |
 | **Carte Réseau (NIC)** | 1 & 2 | Moyenne | Fournir l'adresse MAC et l'accès physique au réseau. |
-| **Hub** | 1 (Physique) | 🧠 Nulle | Connecter plusieurs PC (envoie tout à tout le monde). |
-| **Switch** | 2 (Liaison) | 🧠 Moyenne | Connecter plusieurs PC intelligemment (utilise l'adresse MAC). |
-| **Routeur** | 3 (Réseau) | 🧠🧠 Élevée | Connecter des réseaux différents (LAN ↔ Internet). |
-| **Répéteur** | 1 (Physique) | 🧠 Nulle | Étendre la portée du signal (Régénération). |
+| **Hub** | 1 (Physique) | Nulle | Connecter plusieurs PC (envoie tout à tout le monde). |
+| **Switch** | 2 (Liaison) | Moyenne | Connecter plusieurs PC intelligemment (utilise l'adresse MAC). |
+| **Routeur** | 3 (Réseau) | Élevée | Connecter des réseaux différents (LAN ↔ Internet). |
+| **Répéteur** | 1 (Physique) | Nulle | Étendre la portée du signal (Régénération). |
