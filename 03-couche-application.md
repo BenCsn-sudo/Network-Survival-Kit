@@ -39,12 +39,12 @@ SMTP est un protocole "Pousseur" (Push). Il sert à **envoyer** le courrier d'un
 Voici ce qu'il se passe quand Pierre (Paris) écrit à André (Lyon) :
 
 ```mermaid
-graph LR
-    A[Pierre (MUA)] -->|SMTP| B(Serveur Départ MSA/MTA)
-    B -->|SMTP| C{Internet}
-    C -->|SMTP| D(Serveur Arrivée MTA)
-    D -->|Stockage| E[Boîte aux Lettres MDA]
-    E -.->|POP/IMAP| F[André (MUA)]
+flowchart LR
+    A["Pierre (MUA)"] -->|SMTP| B("Serveur Départ MSA/MTA")
+    B -->|SMTP| C{"Internet"}
+    C -->|SMTP| D("Serveur Arrivée MTA")
+    D -->|Stockage| E["Boîte aux Lettres MDA"]
+    E -.->|POP/IMAP| F["André (MUA)"]
     
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#bfb,stroke:#333,stroke-width:2px
