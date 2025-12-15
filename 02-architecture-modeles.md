@@ -181,7 +181,7 @@ Au fur et à mesure de la descente, la donnée change de nom :
 > Pour le Routeur (Couche 3), le Segment TCP n'est qu'une suite de données, il ne cherche pas à savoir ce qu'il y a dedans. Il regarde juste son en-tête IP.
 
 <div align="center">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVYeIbfNZd4SdJPhlFK9ZPKDx33032JU_aCgi_egK9OFMmATz5d9-yRCXSlhInD0TYyoeHmxKm-g53D4Sv5qFbmd8D2ntzwOffgYUedwbrbDMnLl5TO6ODWJ90oJJIJ4ZNld5-mMORViWX/s1600/284768.png" width="600" />
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVYeIbfNZd4SdJPhlFK9ZPKDx33032JU_aCgi_egK9OFMmATz5d9-yRCXSlhInD0TYyoeHmxKm-g53D4Sv5qFbmd8D2ntzwOffgYUedwbrbDMnLl5TO6ODWJ90oJJIJ4ZNld5-mMORViWX/s1600/284768.png" width="800" />
   <br>
   <i>(Schéma visuel de l'encapsulation et des en-têtes ajoutés)</i>
   <br><br>
