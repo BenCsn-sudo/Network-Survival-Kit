@@ -3,7 +3,7 @@
 **Contexte :** Déménagement d'une startup dans de nouveaux locaux.
 **Objectif :** Rétablir la connectivité réseau (LAN) et l'accès aux services distants (FTP/Web) en corrigeant la topologie physique et la configuration logique des postes.
 
-![Topologie Finale](image_ff5fae.png)
+![Topologie Finale](Topologie.png)
 *(Topologie validée)*
 
 ## 🛠️ Actions Réalisées
