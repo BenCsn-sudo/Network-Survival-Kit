@@ -5,7 +5,7 @@
 ## 1. Accès au périphérique
 
 Contrairement à un PC, on n'a pas d'écran branché directement. On accède à la CLI via :
-1.  **Câble Console (Physique) :** Pour la première configuration (câble bleu clair "Rollover"). Nécessite un logiciel comme **PuTTY** ou **Tera Term**.
+1.  **Câble Console (Physique) :** Pour la première configuration (câble bleu clair "Rollover"). Nécessite un logiciel comme **PuTTY** ou dans notre cas en entrainement sur **Packet Tracer**.
 2.  **SSH / Telnet (Réseau) :** Pour l'accès à distance une fois l'IP configurée.
 
 ## 2. La Hiérarchie des Modes hierarchy
