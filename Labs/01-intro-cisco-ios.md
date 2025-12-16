@@ -37,19 +37,23 @@ Passer en mode privilégié
 ```bash
 enable
 ```
+---
 Passer en mode configuration
 ```bash
 configure terminal
 ```
+---
 1. Changer le nom (Bonne pratique)
 ```bash
 hostname R1-Paris
 ```
+---
 2. Sécuriser l'accès privilégié (Le plus important !)
 > **'secret'** chiffre le mdp, **'password'** le laisse en clair (à éviter)
 ```bash
 enable secret MonMotDePasseFort
 ```
+---
 3. Sécuriser l'accès console (Physique)
 ```bash
 line console 0
@@ -57,10 +61,12 @@ line console 0
  login
 exit
 ```
+---
 4. Mettre une bannière légale (Dissuasion)
 ```bash
 banner motd #ACCES RESTREINT - PERSONNEL AUTORISE UNIQUEMENT#
 ```
+---
 5. Chiffrer tous les mots de passe clairs (Service)
 ```bash
 service password-encryption
