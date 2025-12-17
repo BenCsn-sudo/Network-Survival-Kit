@@ -99,3 +99,70 @@ Voir la configuration sauvegardée
 show startup-config
 ```
 ---
+
+## 5. Connectivité et Adressage IP 🌐
+
+Un switch est un équipement de couche 2 (il comprend les adresses MAC), mais il a besoin d'une **adresse IP** pour être administré à distance (via SSH/Telnet). Sans IP, on ne peut le configurer qu'avec le câble console bleu.
+
+On ne met pas l'IP sur un port physique (comme sur un PC), mais sur une **Interface Virtuelle (SVI)**.
+
+### Configurer l'interface de gestion (SVI)
+
+Par défaut, on utilise l'interface virtuelle du VLAN 1.
+
+```bash
+configure terminal
+```
+
+Entrer dans l'interface virtuelle
+```bash
+interface vlan 1
+```
+
+Attribuer l'IP et le Masque de sous-réseau
+```bash
+ip address 192.168.1.10 255.255.255.0
+```
+
+IMPORTANT : Allumer l'interface (elle est éteinte par défaut)
+```bash
+no shutdown
+exit
+```
+
+### Configurer la passerelle par défaut (Gateway)
+
+Pour que le switch puisse répondre à quelqu'un qui n'est pas dans son réseau local (ex: Internet ou un autre bâtiment).
+
+```bash
+ip default-gateway 192.168.1.254
+
+```
+
+---
+
+## 6. Vérification et Dépannage 🔍
+
+C'est bien de configurer, mais c'est mieux de vérifier que ça marche.
+
+### La commande "Reine" 👑
+
+C'est LA commande la plus utile pour voir l'état de vos ports en un coup d'œil.
+
+```bash
+show ip interface brief
+
+```
+
+* **Status "Up"** : La couche 1 (Physique) est OK (Câble branché).
+* **Protocol "Up"** : La couche 2 (Liaison) est OK.
+
+### Tester la connectivité (Ping)
+
+Pour vérifier si on peut joindre un autre appareil. À faire en mode privilège (`#`).
+
+```bash
+ping 192.168.1.25
+! "!!!!!" = Succès (5/5 reçus)
+! "....." = Échec (Time out)
+```
