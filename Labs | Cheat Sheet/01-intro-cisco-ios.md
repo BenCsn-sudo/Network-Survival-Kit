@@ -43,18 +43,18 @@ Passer en mode configuration
 configure terminal
 ```
 ---
-1. Changer le nom (Bonne pratique)
+Changer le nom (Bonne pratique)
 ```bash
 hostname R1-Paris
 ```
 ---
-2. Sécuriser l'accès privilégié (Le plus important !)
+Sécuriser l'accès privilégié (Le plus important !)
 > **'secret'** chiffre le mdp, **'password'** le laisse en clair (à éviter)
 ```bash
 enable secret MonMotDePasseFort
 ```
 ---
-3. Sécuriser l'accès console (Physique)
+Sécuriser l'accès console (Physique)
 ```bash
 line console 0
  password cisco
@@ -62,11 +62,40 @@ line console 0
 exit
 ```
 ---
-4. Mettre une bannière légale (Dissuasion)
+Mettre une bannière légale (Dissuasion)
 ```bash
 banner motd #ACCES RESTREINT - PERSONNEL AUTORISE UNIQUEMENT#
 ```
 ---
-5. Chiffrer tous les mots de passe clairs (Service)
+Chiffrer tous les mots de passe clairs (Service)
 ```bash
 service password-encryption
+```
+---
+## 4. Gestion de la Configuration (RAM vs NVRAM) 💾
+
+C'est vital de comprendre où sont stockées vos modifications. Si vous éteignez le switch sans sauvegarder, vous perdez tout ce qui est dans la RAM.
+
+| Type | Nom Cisco | Mémoire | Volatile ? | Description |
+| :--- | :--- | :--- | :---: | :--- |
+| **En cours** | `running-config` | **RAM** | ⚠️ OUI | La config active actuellement. |
+| **Démarrage**| `startup-config` | **NVRAM** | ✅ NON | La config chargée au démarrage. |
+
+### Commandes de sauvegarde
+Une fois votre configuration terminée, il faut "copier" ce qui tourne (RAM) vers le disque dur (NVRAM).
+
+Sauvegarder (Copier RAM vers NVRAM)
+```bash
+copy running-config startup-config
+```
+---
+Voir la configuration actuelle
+```bash
+show running-config
+```
+---
+Voir la configuration sauvegardée
+```bash
+show startup-config
+```
+---
