@@ -113,23 +113,23 @@ Par défaut, on utilise l'interface virtuelle du VLAN 1.
 ```bash
 configure terminal
 ```
-
+---
 Entrer dans l'interface virtuelle
 ```bash
 interface vlan 1
 ```
-
+---
 Attribuer l'IP et le Masque de sous-réseau
 ```bash
 ip address 192.168.1.10 255.255.255.0
 ```
-
+---
 IMPORTANT : Allumer l'interface (elle est éteinte par défaut)
 ```bash
 no shutdown
 exit
 ```
-
+---
 ### Configurer la passerelle par défaut (Gateway)
 
 Pour que le switch puisse répondre à quelqu'un qui n'est pas dans son réseau local (ex: Internet ou un autre bâtiment).
@@ -138,7 +138,6 @@ Pour que le switch puisse répondre à quelqu'un qui n'est pas dans son réseau 
 ip default-gateway 192.168.1.254
 
 ```
-
 ---
 
 ## 6. Vérification et Dépannage 🔍
@@ -153,7 +152,7 @@ C'est LA commande la plus utile pour voir l'état de vos ports en un coup d'œil
 show ip interface brief
 
 ```
-
+---
 * **Status "Up"** : La couche 1 (Physique) est OK (Câble branché).
 * **Protocol "Up"** : La couche 2 (Liaison) est OK.
 
