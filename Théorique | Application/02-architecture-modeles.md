@@ -188,3 +188,65 @@ Au fur et à mesure de la descente, la donnée change de nom :
 </div>
 
 ---
+
+## 6. Les Modes de Communication 📢
+
+Sur un réseau, on ne parle pas toujours à une seule personne. Il existe trois manières de transmettre un message :
+
+| Mode | Icône | Description | Exemple |
+| :--- | :---: | :--- | :--- |
+| **Unicast** | 👤 ➝ 👤 | **1 vers 1**. Communication privée entre un émetteur et un destinataire unique. | Naviguer sur un site Web, envoyer un email. |
+| **Multicast**| 👤 ➝ 👥 | **1 vers un Groupe**. L'émetteur envoie à un groupe d'abonnés spécifiques. | IPTV, Vidéoconférence, Protocoles de routage. |
+| **Broadcast**| 👤 ➝ 🌍 | **1 vers Tous**. L'émetteur envoie à *tous* les appareils du réseau local. | DHCP (demander une IP), ARP (demander une MAC). |
+
+---
+
+## 7. Qui décide des règles ? (Organismes de normalisation) 🏛️
+
+Internet n'appartient à personne, mais des organisations bénévoles s'assurent que tout le monde utilise les mêmes normes (Standards ouverts).
+
+* **ISOC / IAB / IETF :** S'occupent des protocoles logiques (**TCP/IP**). Ce sont eux qui rédigent les **RFC** (Request for Comments).
+* **IEEE (Institute of Electrical and Electronics Engineers) :** S'occupe du matériel et des ondes.
+    * *Exemples :* **802.3** (Ethernet), **802.11** (Wi-Fi).
+* **ISO :** A créé le modèle OSI.
+* **TIA/EIA :** Standardise les câbles physiques (ex: la norme de câblage RJ45 T568B).
+
+---
+
+## 8. L'Accès aux Données : Le voyage de l'adresse 🚚
+
+C'est le concept **le plus important** pour comprendre le routage (Couche 2 vs Couche 3).
+
+Quand un paquet voyage, il utilise deux types d'adresses qui ont des rôles différents. Imaginez un voyage en train de Paris à Berlin.
+
+1.  **Adresse Logique (IP - Couche 3) :** C'est le **Destinataire Final**.
+    * *Analogie :* "Je vais à Berlin".
+    * ⚠️ **Règle d'or :** L'adresse IP source et destination **ne changent JAMAIS** pendant le voyage (de bout en bout).
+2.  **Adresse Physique (MAC - Couche 2) :** C'est le **Prochain saut**.
+    * *Analogie :* "Je prends le train jusqu'à Strasbourg (l'escale)".
+    * ⚠️ **Règle d'or :** L'adresse MAC change à **chaque routeur** traversé.
+
+### Scénario A : Communication sur le MÊME réseau
+* **Source :** Mon PC (A)
+* **Destination :** Mon Imprimante (B)
+* Le PC compare l'IP et voit que c'est le même réseau.
+* **Trame envoyée :** MAC Source = A / MAC Destination = B.
+* *Pas besoin de routeur.*
+
+### Scénario B : Communication vers un réseau DISTANT (Internet)
+* **Source :** Mon PC (A)
+* **Destination :** Serveur Google (C)
+* Le PC voit que Google n'est pas dans le salon. Il doit envoyer le paquet à sa **Passerelle par défaut** (Le Routeur).
+
+**Étape 1 (PC vers Routeur) :**
+* IP Destination : Google (Loin)
+* MAC Destination : **MAC du Routeur** (Proche)
+
+**Étape 2 (Routeur vers Internet) :**
+* Le routeur reçoit la trame, enlève l'enveloppe MAC (Désencapsulation).
+* Il regarde l'IP (Google), consulte sa table de routage.
+* Il remet une nouvelle enveloppe MAC (Ré-encapsulation) vers le routeur suivant.
+
+> **Résumé pour le CCNA :**
+> * **IP** = Où je vais à la fin (Global).
+> * **MAC** = À qui je passe le ballon maintenant (Local).
