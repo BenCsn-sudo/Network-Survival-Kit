@@ -247,6 +247,6 @@ Quand un paquet voyage, il utilise deux types d'adresses qui ont des rôles diff
 * Il regarde l'IP (Google), consulte sa table de routage.
 * Il remet une nouvelle enveloppe MAC (Ré-encapsulation) vers le routeur suivant.
 
-> **Résumé pour le CCNA :**
+> **Résumé :**
 > * **IP** = Où je vais à la fin (Global).
 > * **MAC** = À qui je passe le ballon maintenant (Local).
