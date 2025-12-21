@@ -78,54 +78,41 @@ Aujourd'hui, on les encapsule presque toujours dans **SSL/TLS** (Couche Présent
 
 ## 3. Le Web : HTTP et HTTPS 🌐
 
-C'est le protocole le plus connu, celui qui vous permet de lire cette page.
+C'est le socle d'Internet.
 
 * **HTTP (Hypertext Transfer Protocol) :** Port 80.
-    * Fonctionne en mode **Requête / Réponse**. Le client (navigateur) demande une page, le serveur l'envoie.
-    * *Problème :* Tout circule en clair (mots de passe, cartes bancaires).
-* **HTTPS (Secure) :** Port 443.
-    * C'est du HTTP encapsulé dans du **TLS/SSL**. Tout est chiffré.
+    * Fonctionne en mode **Client-Serveur**.
+    * Le client (navigateur) envoie une méthode (GET pour lire, POST pour envoyer un formulaire).
+* **HTTPS (S = Secure) :** Port 443.
+    * C'est du HTTP encapsulé dans un tunnel chiffré (TLS/SSL).
 
-### Les Codes de Statut (Culture G)
-Quand le serveur répond, il donne un code :
-* **200 OK :** Tout va bien.
-* **404 Not Found :** Page introuvable (Erreur client).
-* **500 Internal Server Error :** Le serveur a planté (Erreur serveur).
+### Les Codes de Statut (À connaître par cœur)
+Le serveur répond toujours avec un code à 3 chiffres :
 
----
-
-## 4. Les Services d'Infrastructure (DNS & DHCP) 🏗️
-
-Ces deux protocoles travaillent dans l'ombre mais sont indispensables pour surfer.
-
-### 📖 DNS (Domain Name System)
-* **Le problème :** Les ordinateurs ne comprennent que les adresses IP (ex: `142.250.179.14`), mais les humains retiennent des noms (ex: `google.com`).
-* **La solution :** Le DNS est l'annuaire d'Internet. Il traduit les noms en IP.
-* **Fonctionnement :**
-    1.  Vous tapez `www.cesi.fr`.
-    2.  Votre PC demande à son serveur DNS : "C'est quelle IP cesi.fr ?"
-    3.  Le DNS répond : "C'est `213.32.10.5`".
-    4.  Votre PC se connecte à l'IP.
-
-### 🎁 DHCP (Dynamic Host Configuration Protocol)
-* **Le problème :** Configurer manuellement l'IP, le Masque et la Passerelle sur 500 PC est impossible.
-* **La solution :** Le DHCP distribue automatiquement la configuration réseau aux appareils qui se connectent.
-* **Le Processus DORA :**
-    1.  **D**iscover : Le PC crie "Y'a quelqu'un ? Je veux une IP !" (Broadcast).
-    2.  **O**ffer : Le Serveur DHCP répond "Tiens, je te propose la 192.168.1.10".
-    3.  **R**equest : Le PC répond "Ok, je la prends !".
-    4.  **A**cknowledge : Le Serveur confirme "C'est noté, elle est à toi pour 24h".
-
----
-
-## 📝 Résumé des Protocoles Applicatifs
-
-| Protocole | Port (Défaut) | Rôle |
+| Code | Signification | Exemple |
 | :--- | :--- | :--- |
-| **HTTP** | 80 (TCP) | Afficher des pages web (non sécurisé). |
-| **HTTPS** | 443 (TCP) | Afficher des pages web (sécurisé). |
-| **SMTP** | 25 (TCP) | Envoyer des emails. |
-| **POP3** | 110 (TCP) | Recevoir des emails (téléchargement). |
-| **IMAP** | 143 (TCP) | Recevoir des emails (synchro serveur). |
-| **DNS** | 53 (UDP/TCP) | Traduire Nom ↔ IP. |
-| **DHCP** | 67/68 (UDP) | Distribuer des IP automatiquement. |
+| **2xx** | **Succès** | `200 OK` (Voici la page demandée). |
+| **3xx** | **Redirection** | `301 Moved Permanently` (La page a changé d'adresse). |
+| **4xx** | **Erreur Client** | `404 Not Found` (Tu as mal tapé l'URL) ou `403 Forbidden` (Interdit). |
+| **5xx** | **Erreur Serveur** | `500 Internal Server Error` (Le serveur a planté). |
+
+---
+
+## 4. DNS (Domain Name System) : L'annuaire 📖
+
+Les ordinateurs ne communiquent qu'avec des adresses IP (ex: `142.250.75.0`). Les humains préfèrent les noms (`google.com`). Le DNS fait la traduction.
+
+### Le Processus de Résolution
+Quand vous tapez `www.cisco.com`, voici ce qu'il se passe :
+
+```mermaid
+sequenceDiagram
+    participant PC as Votre Ordi
+    participant DNS as Serveur DNS (8.8.8.8)
+    participant Web as Serveur Web Cisco
+    
+    PC->>DNS: C'est quelle IP "cisco.com" ?
+    Note right of DNS: Recherche dans l'annuaire...
+    DNS-->>PC: C'est 23.1.5.8 !
+    PC->>Web: Hello 23.1.5.8 (Requete HTTP)
+    Web-->>PC: Voici la page d'accueil (Réponse)
