@@ -73,3 +73,59 @@ Aujourd'hui, on les encapsule presque toujours dans **SSL/TLS** (Couche Présent
   * SMTP devient **SMTPS** (Port 465/587)
   * IMAP devient **IMAPS** (Port 993)
   * POP devient **POP3S** (Port 995)
+
+---
+
+## 3. Le Web : HTTP et HTTPS 🌐
+
+C'est le protocole le plus connu, celui qui vous permet de lire cette page.
+
+* **HTTP (Hypertext Transfer Protocol) :** Port 80.
+    * Fonctionne en mode **Requête / Réponse**. Le client (navigateur) demande une page, le serveur l'envoie.
+    * *Problème :* Tout circule en clair (mots de passe, cartes bancaires).
+* **HTTPS (Secure) :** Port 443.
+    * C'est du HTTP encapsulé dans du **TLS/SSL**. Tout est chiffré.
+
+### Les Codes de Statut (Culture G)
+Quand le serveur répond, il donne un code :
+* **200 OK :** Tout va bien.
+* **404 Not Found :** Page introuvable (Erreur client).
+* **500 Internal Server Error :** Le serveur a planté (Erreur serveur).
+
+---
+
+## 4. Les Services d'Infrastructure (DNS & DHCP) 🏗️
+
+Ces deux protocoles travaillent dans l'ombre mais sont indispensables pour surfer.
+
+### 📖 DNS (Domain Name System)
+* **Le problème :** Les ordinateurs ne comprennent que les adresses IP (ex: `142.250.179.14`), mais les humains retiennent des noms (ex: `google.com`).
+* **La solution :** Le DNS est l'annuaire d'Internet. Il traduit les noms en IP.
+* **Fonctionnement :**
+    1.  Vous tapez `www.cesi.fr`.
+    2.  Votre PC demande à son serveur DNS : "C'est quelle IP cesi.fr ?"
+    3.  Le DNS répond : "C'est `213.32.10.5`".
+    4.  Votre PC se connecte à l'IP.
+
+### 🎁 DHCP (Dynamic Host Configuration Protocol)
+* **Le problème :** Configurer manuellement l'IP, le Masque et la Passerelle sur 500 PC est impossible.
+* **La solution :** Le DHCP distribue automatiquement la configuration réseau aux appareils qui se connectent.
+* **Le Processus DORA :**
+    1.  **D**iscover : Le PC crie "Y'a quelqu'un ? Je veux une IP !" (Broadcast).
+    2.  **O**ffer : Le Serveur DHCP répond "Tiens, je te propose la 192.168.1.10".
+    3.  **R**equest : Le PC répond "Ok, je la prends !".
+    4.  **A**cknowledge : Le Serveur confirme "C'est noté, elle est à toi pour 24h".
+
+---
+
+## 📝 Résumé des Protocoles Applicatifs
+
+| Protocole | Port (Défaut) | Rôle |
+| :--- | :--- | :--- |
+| **HTTP** | 80 (TCP) | Afficher des pages web (non sécurisé). |
+| **HTTPS** | 443 (TCP) | Afficher des pages web (sécurisé). |
+| **SMTP** | 25 (TCP) | Envoyer des emails. |
+| **POP3** | 110 (TCP) | Recevoir des emails (téléchargement). |
+| **IMAP** | 143 (TCP) | Recevoir des emails (synchro serveur). |
+| **DNS** | 53 (UDP/TCP) | Traduire Nom ↔ IP. |
+| **DHCP** | 67/68 (UDP) | Distribuer des IP automatiquement. |
