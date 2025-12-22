@@ -15,7 +15,7 @@ Dans cet exercice Packet Tracer, la topologie logique est déjà configurée, ma
 
 | État Initial | État Final (Câblé) |
 | :---: | :---: |
-| ![Topologie Initiale](./img/topology-before.png) | ![Topologie Finale](./img/topology-after.png) |
+| ![Topologie Initiale](./img/before.png) | ![Topologie Finale](./img/after.png) |
 
 
 ## 3. Choix des Câbles et Justification 🛠️
