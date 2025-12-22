@@ -65,7 +65,7 @@ Ici, on transmet de la lumière. C'est le top de la performance.
 * **Atténuation très faible :** Peut parcourir des kilomètres sans perte.
 * **Sécurité :** Difficile à pirater (on ne peut pas écouter le signal sans couper le câble).
 
-### 🧵 Multimode vs Monomode (Le classique des exams !)
+### 🧵 Multimode vs Monomode
 
 | Caractéristique | Fibre Multimode (MMF) | Fibre Monomode (SMF) |
 | :--- | :--- | :--- |
@@ -73,6 +73,10 @@ Ici, on transmet de la lumière. C'est le top de la performance.
 | **Source** | LED (Moins cher). | Laser (Plus cher). |
 | **Distance** | Courte (< 500m). Idéal pour les LAN/Campus. | Longue (Des km). Idéal pour les WAN/Opérateurs. |
 | **Couleur Gaine** | Souvent 🟠 Orange ou 🔵 Aqua. | Souvent 🟡 Jaune. |
+
+| Multimode (MMF) | Monomode (SMF) |
+| :---: | :---: |
+| ![Coax](./img/MULTI.png) | ![Coax](./img/MONO.png) |
 
 ### 🔗 Connecteurs Fibre
 Contrairement au RJ45 unique, il y a plein de formats :
