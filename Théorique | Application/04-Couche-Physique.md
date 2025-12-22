@@ -45,12 +45,9 @@ Le signal électrique peut être perturbé par deux phénomènes majeurs :
 
 | Type | Nom | Image | Usage |
 | :--- | :--- | :---: | :--- |
-| **UTP** | Unshielded Twisted Pair |  | **Standard LAN**. Pas de blindage, juste des torsades pour annuler la diaphonie. |
-| **STP** | Shielded Twisted Pair |  | **Milieux industriels**. Chaque paire est entourée d'alu pour protéger des EMI. |
-| **Coaxial** | Coax | 
-
-[Image of coaxial cable structure]
- | **Internet Câble / TV**. Un conducteur central épais. (Moins utilisé en LAN). |
+| **UTP** | Unshielded Twisted Pair | ![UTP](./img/topology-before.png) | **Standard LAN**. Pas de blindage, juste des torsades pour annuler la diaphonie. |
+| **STP** | Shielded Twisted Pair | ![STP](./img/topology-before.png) | **Milieux industriels**. Chaque paire est entourée d'alu pour protéger des EMI. |
+| **Coaxial** | Coax | ![Coax](./img/topology-before.png) | **Internet Câble / TV**. Un conducteur central épais. (Moins utilisé en LAN). |
 
 ### 🔌 La Connectique UTP (RJ45)
 C'est le standard Ethernet. Il suit la norme **TIA-568**.
