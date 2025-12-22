@@ -43,7 +43,7 @@ C'est ici que se joue la différence entre câble Droit et Croisé.
 * **Routeur 0 ↔ Serveur (Netacad.pka) :** Câble **CROISÉ** (Cross-Over).
     * *Pourquoi ?* **C'est le point clé du TP.** Un PC et un Routeur utilisent les mêmes broches pour émettre (1 & 2) et recevoir (3 & 6). Si on utilise un câble droit, ils émettent sur le même fil et se percutent. [cite_start]Le câble croisé inverse les fils pour que l'émission de l'un tombe en face de la réception de l'autre[cite: 36, 37, 38].
 
-> [cite_start]**Note :** Les cartes réseaux modernes ont la fonction *Auto-MDIX* qui croise automatiquement, mais ce Lab force à connaître la théorie historique[cite: 43].
+> **Note :** Les cartes réseaux modernes ont la fonction *Auto-MDIX* qui croise automatiquement, mais ce Lab force à connaître la théorie historique[cite: 43].
 
 ### ©️ La Connexion de Gestion
 * **PC de Config ↔ Routeur (Console) :** Câble **Console** (Bleu ciel).
