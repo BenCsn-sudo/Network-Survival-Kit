@@ -1,8 +1,7 @@
 # 05 - La Couche Physique (Layer 1) 🔌
 
 > **Rôle :** La couche physique est la seule qui touche le matériel réel. Son job est de transmettre des **bits** (0 et 1) d'un appareil à un autre via un support physique (Média).
-
-Elle ne s'occupe pas de la signification des données, juste de leur transport brut sous forme de signaux (électriques, lumineux ou ondes radio).
+> Elle ne s'occupe pas de la signification des données, juste de leur transport brut sous forme de signaux (électriques, lumineux ou ondes radio).
 
 ---
 
@@ -45,9 +44,9 @@ Le signal électrique peut être perturbé par deux phénomènes majeurs :
 
 | Type | Nom | Image | Usage |
 | :--- | :--- | :---: | :--- |
-| **UTP** | Unshielded Twisted Pair | ![UTP](./img/topology-before.png) | **Standard LAN**. Pas de blindage, juste des torsades pour annuler la diaphonie. |
-| **STP** | Shielded Twisted Pair | ![STP](./img/topology-before.png) | **Milieux industriels**. Chaque paire est entourée d'alu pour protéger des EMI. |
-| **Coaxial** | Coax | ![Coax](./img/topology-before.png) | **Internet Câble / TV**. Un conducteur central épais. (Moins utilisé en LAN). |
+| **UTP** | Unshielded Twisted Pair | ![UTP](./img/UTP.png) | **Standard LAN**. Pas de blindage, juste des torsades pour annuler la diaphonie. |
+| **STP** | Shielded Twisted Pair | ![STP](./img/STP.png) | **Milieux industriels**. Chaque paire est entourée d'alu pour protéger des EMI. |
+| **Coaxial** | Coax | ![Coax](./img/COAX.png) | **Internet Câble / TV**. Un conducteur central épais. (Moins utilisé en LAN). |
 
 ### 🔌 La Connectique UTP (RJ45)
 C'est le standard Ethernet. Il suit la norme **TIA-568**.
