@@ -32,17 +32,24 @@ Pour sortir du réseau local, nous utilisons des technologies spécifiques.
 * **Routeur 0 ↔ Routeur 1 :** Câble **Série (DCE/DTE)**.
     * *Pourquoi ?* Utilisé pour les liaisons point-à-point longue distance historiques entre routeurs.
 
-### 🅱️ Les Connexions LAN (Réseau Local) - Le piège du Cuivre ⚠️
-C'est ici que se joue la différence entre câble Droit et Croisé.
+### 🅱️ Les Connexions LAN (Réseau Local)
+C'est ici que l'on voit la diversité des médias (Cuivre vs Fibre).
 
-* **Routeur 1 ↔ Switch :** Câble **Droit**.
-    * *Pourquoi ?* On connecte des équipements de niveaux différents (L3 vers L2).
-* **Switch ↔ PC :** Câble **Droit**.
-    * *Pourquoi ?* Idem, niveaux différents.
-* **Routeur 0 ↔ Serveur (Netacad.pka) :** Câble **CROISÉ** (Cross-Over).
-    * *Pourquoi ?* **C'est le point clé du TP.** Un PC et un Routeur utilisent les mêmes broches pour émettre (1 & 2) et recevoir (3 & 6). Si on utilise un câble droit, ils émettent sur le même fil et se percutent. Le câble croisé inverse les fils pour que l'émission de l'un tombe en face de la réception de l'autre.
+* **Routeur 1 ↔ Switch :** Câble **Fibre Optique** (Ligne Orange).
+    * *Pourquoi ?* Le lab utilise ici des interfaces fibre (probablement des ports `FastEthernet 100BASE-FX`). Contrairement au cuivre, la fibre utilise la lumière, ce qui la rend insensible aux interférences électriques et permet de plus longues distances.
+    * *Note :* En vue physique, on verrait deux brins (un pour l'émission TX, un pour la réception RX).
+* **Switch ↔ PC :** Câble **Cuivre Droit** (Ligne Noire).
+    * *Pourquoi ?* C'est la connexion standard Ethernet (RJ45) pour les terminaux.
+* **Routeur 0 ↔ Serveur (Netacad.pka) :** Câble **Cuivre CROISÉ** (Ligne Noire pointillée).
+    * *Pourquoi ?* **C'est le point clé du TP.** Un PC et un Routeur utilisent les mêmes broches pour émettre (1 & 2) et recevoir (3 & 6). Si on utilise un câble droit, ils émettent sur le même fil et se percutent. Le câble croisé inverse les fils.
 
 > **Note :** Les cartes réseaux modernes ont la fonction *Auto-MDIX* qui croise automatiquement, mais ce Lab force à connaître la théorie historique.
+
+> **Rappel des couleurs Packet Tracer :**
+> * 🟠 **Orange :** Fibre Optique.
+> * ⚡ **Rouge (Éclair) :** Câble Série (WAN).
+> * ⚫ **Noir (Continu) :** Cuivre Droit.
+> * ⚫ **Noir (Pointillé) :** Cuivre Croisé.
 
 ### ©️ La Connexion de Gestion
 * **PC de Config ↔ Routeur (Console) :** Câble **Console** (Bleu ciel).
