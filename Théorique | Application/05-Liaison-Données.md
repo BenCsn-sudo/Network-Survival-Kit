@@ -98,6 +98,8 @@ Contrairement aux autres couches, la couche 2 ajoute quelque chose **devant** (H
 
 > **Note importante :** Si le calcul du FCS à l'arrivée ne correspond pas à celui envoyé, la trame est considérée comme corrompue et est **jetée** (Dropped). La couche 2 ne demande pas de renvoi (c'est le boulot de TCP en couche 4).
 
+![Trame](./img/LDD.png)
+
 ### L'Adresse de Couche 2 (MAC)
 
 * Uniquement utilisée pour communiquer dans le **réseau local** (LAN).
