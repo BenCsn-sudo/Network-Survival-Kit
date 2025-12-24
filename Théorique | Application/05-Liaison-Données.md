@@ -104,17 +104,3 @@ Contrairement aux autres couches, la couche 2 ajoute quelque chose **devant** (H
 * Dès que la trame passe un routeur, l'en-tête de couche 2 est retiré et remplacé par un nouveau pour le réseau suivant.
 
 ---
-
-*Basé sur le module 6 du CCNA - La Couche Liaison de Données.*
-
-```
-
-### Ce que ce README couvre (Points clés du module 6) :
-1.  **Sous-couches LLC/MAC :** Distinction cruciale du 6.1.2.
-2.  **CSMA/CD vs CA :** Le point technique le plus important du module (6.2.7 et 6.2.8).
-3.  **La Trame (Frame) :** La structure avec le FCS à la fin (Trailer), concept unique à cette couche (6.3).
-4.  **Topologies :** Distinction WAN/LAN et Physique/Logique.
-
-Tu peux créer ton dossier `06-couche-liaison` et y coller ça. C'est propre, technique et ça fait une super fiche de révision !
-
-```
