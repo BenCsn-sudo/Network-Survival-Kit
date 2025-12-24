@@ -1,8 +1,7 @@
 # 05 - La Couche Liaison de Données (Layer 2) 🔗
 
 > **Rôle :** Préparer les données pour le réseau physique. Elle permet l'échange de données entre deux périphériques sur le **même** réseau (ou sur le même lien).
-
-Si la couche 1 est la route (le bitume), la couche 2 est le code de la route (qui a le droit de passer, comment on s'arrête, etc.).
+> Si la couche 1 est la route (le bitume), la couche 2 est le code de la route (qui a le droit de passer, comment on s'arrête, etc.).
 
 ---
 
