@@ -1,4 +1,4 @@
-# 06 - La Couche Liaison de Données (Layer 2) 🔗
+# 05 - La Couche Liaison de Données (Layer 2) 🔗
 
 > **Rôle :** Préparer les données pour le réseau physique. Elle permet l'échange de données entre deux périphériques sur le **même** réseau (ou sur le même lien).
 
