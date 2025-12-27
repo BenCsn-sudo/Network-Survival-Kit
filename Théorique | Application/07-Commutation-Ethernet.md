@@ -91,7 +91,6 @@ Comment le switch gère la trame entre le moment où elle entre et où elle sort
 
 ### Concepts de Ports
 
-* **Duplex :**
 * **Full-Duplex :** Envoi/Réception simultanés (Switchs modernes).
 * **Half-Duplex :** Un seul sens à la fois (Vieux Hubs, Wi-Fi).
 
@@ -99,16 +98,3 @@ Comment le switch gère la trame entre le moment où elle entre et où elle sort
 * **Auto-MDIX :** Fonctionnalité qui détecte automatiquement le type de câble (Droit ou Croisé) et adapte le port. Plus besoin de se soucier du type de câble !
 
 ---
-
-*Basé sur le Module 7 du CCNA - Commutation Ethernet.*
-
-```
-
-### Points forts de ce README :
-1.  **L'Algorithme d'apprentissage :** J'ai utilisé un diagramme Mermaid pour le processus "Source -> Apprendre / Destination -> Transmettre". C'est beaucoup plus clair qu'un pavé de texte.
-2.  **Tableau des méthodes :** Store-and-Forward vs Cut-Through est une distinction classique à maîtriser.
-3.  **Structure :** On part de la Trame (l'objet), puis l'Adresse (l'identifiant), puis le Switch (l'acteur). C'est logique.
-
-C'est prêt à être intégré dans ton dossier `07-commutation-ethernet` !
-
-```
