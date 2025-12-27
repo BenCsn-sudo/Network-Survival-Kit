@@ -99,7 +99,6 @@ Comment le switch gère la trame entre le moment où elle entre et où elle sort
 
 ---
 
-![Trame](./img/PORT.png)
-
+<img src="./img/PORT.png" alt="port" width="200"/>
 
 ---
