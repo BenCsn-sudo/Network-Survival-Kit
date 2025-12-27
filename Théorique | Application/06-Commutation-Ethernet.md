@@ -1,4 +1,4 @@
-# 07 - Commutation Ethernet & Fonctionnement du Switch 🔀
+# 06 - Commutation Ethernet & Fonctionnement du Switch 🔀
 
 > **Rôle :** Comprendre la technologie dominante des réseaux locaux (Ethernet) et comment un commutateur (Switch) prend ses décisions de transfert à la vitesse de l'éclair.
 
