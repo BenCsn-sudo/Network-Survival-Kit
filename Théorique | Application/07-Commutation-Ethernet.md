@@ -99,6 +99,6 @@ Comment le switch gère la trame entre le moment où elle entre et où elle sort
 
 ---
 
-<img style="float: center;" src="./img/PORT.png" alt="port" width="600"/>
+<img style="float:right;" src="./img/PORT.png" alt="port" width="600"/>
 
 ---
