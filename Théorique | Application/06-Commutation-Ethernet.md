@@ -97,8 +97,6 @@ Comment le switch gère la trame entre le moment où elle entre et où elle sort
 
 * **Auto-MDIX :** Fonctionnalité qui détecte automatiquement le type de câble (Droit ou Croisé) et adapte le port. Plus besoin de se soucier du type de câble !
 
----
-
 <p align="center">
   <img src="./img/PORT.png" alt="port" width="600"/>
 </p>
