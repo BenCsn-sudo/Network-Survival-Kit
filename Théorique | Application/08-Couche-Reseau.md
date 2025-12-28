@@ -1,8 +1,7 @@
 # 08 - La Couche Réseau (Layer 3) 🌐
 
 > **Rôle :** Transporter des paquets de données d'un hôte à un autre, même s'ils sont sur des réseaux géographiquement éloignés.
-
-Contrairement à la couche 2 (qui reste locale), la couche 3 est **routable**. Elle traverse le monde.
+> Contrairement à la couche 2 (qui reste locale), la couche 3 est **routable**. Elle traverse le monde.
 
 ---
 
