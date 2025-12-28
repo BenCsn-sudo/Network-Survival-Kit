@@ -1,19 +1,3 @@
-C'est parfait. Le Module 8 est le cœur de la compétence d'un ingénieur réseau. C'est ici que l'on comprend comment Internet fonctionne vraiment (le routage IP).
-
-Comme tu l'as suggéré, **on fait un nouveau dossier** pour ce module, car la couche 3 est dense et mérite d'être isolée de la couche 2 (Ethernet) et de la couche 4 (Transport).
-
-* **Dossier :** `08-couche-reseau`
-* **Fichier :** `README.md`
-
-Voici le contenu structuré "Cheat Sheet" pour ton repo. J'ai mis l'accent sur la comparaison IPv4/IPv6 et la logique de décision du routeur.
-
----
-
-### Nouveau Dossier : `08-couche-reseau/`
-
-### Fichier : `README.md`
-
-```markdown
 # 08 - La Couche Réseau (Layer 3) 🌐
 
 > **Rôle :** Transporter des paquets de données d'un hôte à un autre, même s'ils sont sur des réseaux géographiquement éloignés.
