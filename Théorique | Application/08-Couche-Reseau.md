@@ -70,14 +70,13 @@ Quand vous envoyez un fichier, votre PC se pose une question simple :
 Le routeur reçoit le paquet. Il regarde l'IP destination et consulte sa **Table de Routage**.
 
 ```mermaid
-graph TD
-    A[Paquet Arrive] --> B{IP Destination connue dans la table ?}
-    B -- OUI (Route Directe) --> C[Envoyer sur l'interface connectée]
-    B -- OUI (Route Distante) --> D[Envoyer au Routeur Suivant (Next Hop)]
-    B -- NON --> E{Route par défaut existe ?}
-    E -- OUI --> F[Envoyer à la passerelle de dernier recours]
-    E -- NON --> G[🗑️ Jeter le paquet + Erreur ICMP]
-
+flowchart TD
+    A["Paquet Arrive"] --> B{"IP Destination connue dans la table ?"}
+    B -- "OUI (Route Directe)" --> C["Envoyer sur l'interface connectée"]
+    B -- "OUI (Route Distante)" --> D["Envoyer au Routeur Suivant (Next Hop)"]
+    B -- "NON" --> E{"Route par défaut existe ?"}
+    E -- "OUI" --> F["Envoyer à la passerelle de dernier recours"]
+    E -- "NON" --> G["🗑️ Jeter le paquet + Erreur ICMP"]
 ```
 
 ---
