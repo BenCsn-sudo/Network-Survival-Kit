@@ -108,16 +108,3 @@ S    10.10.10.0/24 [1/0] via 203.0.113.2
 * **S :** Route statique ajoutée par l'humain.
 
 ---
-
-*Basé sur le Module 8 du CCNA - La Couche Réseau.*
-
-```
-
-### Ce que j'ai mis en valeur pour ton projet :
-1.  **Diagramme de décision (Mermaid) :** J'ai schématisé la pensée du routeur ("Je connais ?" -> "J'envoie" / "Je ne connais pas ?" -> "Je jette"). C'est vital de comprendre ça.
-2.  **Comparatif IPv4/v6 :** C'est un tableau très utile pour réviser rapidement les différences structurelles.
-3.  **Le TTL :** J'ai insisté dessus car c'est grâce à lui qu'on évite que des paquets tournent à l'infini lors d'une boucle de routage.
-
-Tu peux copier ça dans ton nouveau dossier. C'est propre et ça suit parfaitement ta progression !
-
-```
