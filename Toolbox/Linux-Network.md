@@ -1,6 +1,7 @@
 # 🐧 Linux Network Cheat Sheet (Modern)
 
 > **Objectif :** Analyser et dépanner le réseau depuis un terminal Linux (Debian/Ubuntu/Mint).
+> 
 > **Note :** On privilégie ici la suite moderne **iproute2** (`ip`) qui remplace les vieux outils (`ifconfig`, `route`).
 
 ## 1. Interfaces & Adressage (Couche 1 & 2)
