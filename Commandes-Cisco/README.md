@@ -8,7 +8,7 @@
 
 Avant de configurer, il faut câbler. Voici à quoi correspondent les icônes dans la barre d'outils :
 
-*(Pense à mettre ton image `image_6a7a72.png` dans un dossier `img` et à la renommer)*
+![Connection]./img/CONNECTION.png
 
 | Icône | Nom | Usage Principal |  
 | --- | --- | --- |
