@@ -1,19 +1,39 @@
-
-
 # 04 - Prise en main de Cisco IOS (CLI)
 
 > **Cisco IOS** (Internetwork Operating System) est le système d'exploitation propriétaire présent sur la majorité des routeurs et switchs Cisco. Il s'utilise en ligne de commande (CLI).
 
-## 1. Accès au périphérique
+---
+
+## 1. Mémo Visuel : Les Câbles Packet Tracer ⚡
+
+Avant de configurer, il faut câbler. Voici à quoi correspondent les icônes dans la barre d'outils :
+
+*(Pense à mettre ton image `image_6a7a72.png` dans un dossier `img` et à la renommer)*
+
+| Icône | Nom | Usage Principal |  
+| --- | --- | --- |
+| ⚡ | **Automatique** | Choisit le câble à ta place. *À éviter pour apprendre !* |
+| 🔵 | **Console** (Bleu ciel) | **PC (RS232) ↔ Routeur/Switch (Console)**. Sert à la configuration initiale (Ligne de commande). |
+| ⚫ | **Droit** (Trait noir) | **Équipements DIFFÉRENTS** (PC ↔ Switch / Switch ↔ Routeur). Le standard RJ45. |
+| ➖ | **Croisé** (Pointillés) | **Équipements IDENTIQUES** (PC ↔ PC / Switch ↔ Switch / PC ↔ Routeur). |
+| 🟠 | **Fibre** (Orange) | **Liaisons Longue Distance**. Nécessite des ports spécifiques (GigabitEthernet ou SFP). |
+| 〰️ | **Téléphone** (Gris) | Modem ↔ Prise Téléphone (RJ11). Pour l'ADSL. |
+| 🟦 | **Coaxial** (Bleu zigzag) | Cloud ↔ Modem Câble. Pour l'Internet par câble TV. |
+| 🟥🕓 | **Série DCE** (Éclair + Horloge) | **Routeur ↔ Routeur (WAN)**. Côté "Fournisseur" qui donne le rythme (*Clock Rate*). |
+| 🟥 | **Série DTE** (Éclair simple) | **Routeur ↔ Routeur (WAN)**. Côté "Client". |
+
+---
+
+## 2. Accès au périphérique
 
 Contrairement à un PC, on n'a pas d'écran branché directement. On accède à la CLI via :
 
-1. **Câble Console (Physique) :** Pour la première configuration (câble bleu clair "Rollover"). Nécessite un logiciel comme **PuTTY** (ou l'onglet "Console" dans Packet Tracer).
+1. **Câble Console (Physique) :** Pour la première configuration (câble bleu clair). Nécessite un logiciel comme **PuTTY** (ou l'onglet "Desktop > Terminal" dans Packet Tracer).
 2. **SSH / Telnet (Réseau) :** Pour l'accès à distance une fois l'IP configurée.
 
 ---
 
-## 2. La Hiérarchie des Modes
+## 3. La Hiérarchie des Modes
 
 C'est le concept le plus important. Une commande ne fonctionne que si l'on est dans le bon mode.
 
@@ -32,7 +52,7 @@ C'est le concept le plus important. Une commande ne fonctionne que si l'on est d
 
 ---
 
-## 3. Commandes de "Survie" (Cheat Sheet) 🛠️
+## 4. Commandes de "Survie" (Cheat Sheet) 🛠️
 
 ### ⌨️ Raccourcis Clavier indispensables
 
@@ -74,7 +94,7 @@ service password-encryption
 
 ---
 
-## 4. Configuration des Interfaces (IP) 🌐
+## 5. Configuration des Interfaces (IP) 🌐
 
 C'est ici que ça change selon le matériel !
 
@@ -109,7 +129,7 @@ exit
 
 ---
 
-## 5. Gestion de la Sauvegarde (RAM vs NVRAM) 💾
+## 6. Gestion de la Sauvegarde (RAM vs NVRAM) 💾
 
 | Type | Nom Cisco | Mémoire | Volatile ? | Description |
 | --- | --- | --- | --- | --- |
@@ -127,7 +147,7 @@ write
 
 ---
 
-## 6. Vérification et Dépannage (Show Commands) 🔍
+## 7. Vérification et Dépannage (Show Commands) 🔍
 
 C'est ici que tu passes 80% de ton temps.
 
