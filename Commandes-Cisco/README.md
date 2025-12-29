@@ -8,11 +8,9 @@
 
 Avant de configurer, il faut câbler. Voici à quoi correspondent les icônes dans la barre d'outils :
 
-<p align="center">
-  <img src="./img/CONNECTION.png" alt="connection" width="600"/>
-</p>
+*(Pense à mettre ton image `image_6a7a72.png` dans un dossier `img` et à la renommer)*
 
-| Icône | Nom | Usage Principal |  
+| Icône | Nom | Usage Principal |
 | --- | --- | --- |
 | ⚡ | **Automatique** | Choisit le câble à ta place. *À éviter pour apprendre !* |
 | 🔵 | **Console** (Bleu ciel) | **PC (RS232) ↔ Routeur/Switch (Console)**. Sert à la configuration initiale (Ligne de commande). |
@@ -177,6 +175,15 @@ show ip route
 * `C` : **Connected** (Réseau directement branché).
 * `L` : **Local** (L'IP de l'interface elle-même).
 * `S` : **Static** (Route ajoutée manuellement).
+
+### 🔗 La Table ARP (Routeur - L3)
+
+Pour voir la correspondance IP ↔ MAC. Indispensable si un Ping échoue dans le LAN.
+
+```bash
+show ip arp
+
+```
 
 ### 🔀 La Table MAC (Switch - L2)
 
