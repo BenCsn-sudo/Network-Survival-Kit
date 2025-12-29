@@ -8,7 +8,9 @@
 
 Avant de configurer, il faut câbler. Voici à quoi correspondent les icônes dans la barre d'outils :
 
-![Connection](./img/CONNECTION.png)
+<p align="center">
+  <img src="./img/CONNECTION.png" alt="connection" width="600"/>
+</p>
 
 | Icône | Nom | Usage Principal |  
 | --- | --- | --- |
