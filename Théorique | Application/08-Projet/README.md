@@ -5,9 +5,9 @@
 
 ## 📄 Contenu du dépôt
 
-* **`10.3.5-troubleshoot-gateway-initial.pkt`** : Le fichier Packet Tracer original (maquette de base avec les pannes).
-* **`10.3.5-troubleshoot-gateway-fixed.pkt`** : Le fichier Packet Tracer final (maquette corrigée et fonctionnelle).
-* **`10.3.5-packet-tracer---troubleshoot-default-gateway-issues_fr-FR.pdf`** : Les instructions officielles et la table d'adressage de l'exercice.
+* **`maquette-origine.pkt`** : Le fichier Packet Tracer original (maquette de base avec les pannes).
+* **`maquette-finale.pkt`** : Le fichier Packet Tracer final (maquette corrigée et fonctionnelle).
+* **`instructions.pdf`** : Les instructions officielles et la table d'adressage de l'exercice.
 
 ## 📝 Contexte et Problématique
 
