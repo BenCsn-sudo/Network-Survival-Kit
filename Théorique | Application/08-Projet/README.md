@@ -1,6 +1,7 @@
-# 10.3.5 Packet Tracer - Dépannage de passerelle par défaut
+# Dépannage de passerelle par défaut
 
-Ce dépôt contient la résolution de l'étude de cas **10.3.5** du cursus **CCNA : Introduction to Networks (ITN)**. L'objectif de ce laboratoire est d'analyser une architecture réseau documentée mais dysfonctionnelle, d'identifier les erreurs de configuration et de rétablir la connectivité de bout en bout.
+> Ce dépôt contient la résolution de l'étude de cas **10.3.5** du cursus **CCNA : Introduction to Networks (ITN)**. L'objectif de ce laboratoire est d'analyser une architecture réseau documentée mais dysfonctionnelle,
+> d'identifier les erreurs de configuration et de rétablir la connectivité de bout en bout.
 
 ## 📄 Contenu du dépôt
 
@@ -38,5 +39,3 @@ La résolution s'est déroulée en deux phases principales : l'analyse de la doc
 * Configuration de base des équipements Cisco (IOS).
 
 ---
-
-*Projet réalisé dans le cadre de la formation CCNA - Introduction to Networks.*
