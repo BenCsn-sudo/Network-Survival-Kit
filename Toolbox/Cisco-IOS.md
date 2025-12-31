@@ -1,6 +1,7 @@
 # 04 - Prise en main de Cisco IOS (CLI)
 
-> **Cisco IOS** (Internetwork Operating System) est le système d'exploitation propriétaire présent sur la majorité des routeurs et switchs Cisco. Il s'utilise en ligne de commande (CLI).
+> **Cisco IOS** (Internetwork Operating System) est le système d'exploitation propriétaire présent sur la majorité des routeurs et switchs Cisco.
+> Il s'utilise en ligne de commande (CLI).
 
 ---
 
@@ -9,7 +10,7 @@
 Avant de configurer, il faut câbler. Voici à quoi correspondent les icônes dans la barre d'outils :
 
 <p align="center">
-  <img src="./img/CONNECTION.png" alt="connection" width="600"/>
+<img src="./img/CONNECTION.png" alt="connection" width="600"/>
 </p>
 
 | Icône | Nom | Usage Principal |
@@ -86,10 +87,17 @@ line console 0
  login
 exit
 
-! 4. Mettre une bannière légale
+! 4. Sécuriser l'accès distant (VTY - Telnet/SSH)
+! "0 15" signifie qu'on autorise 16 connexions simultanées
+line vty 0 15
+ password cisco
+ login
+exit
+
+! 5. Mettre une bannière légale
 banner motd #ACCES RESTREINT - PERSONNEL AUTORISE UNIQUEMENT#
 
-! 5. Chiffrer les mots de passe clairs (Service)
+! 6. Chiffrer les mots de passe clairs (Service)
 service password-encryption
 
 ```
@@ -103,26 +111,38 @@ C'est ici que ça change selon le matériel !
 ### A. Sur un SWITCH (Interface Virtuelle - SVI)
 
 Le switch est un équipement de couche 2. On lui donne une IP juste pour pouvoir le gérer à distance.
+Il lui faut aussi une passerelle (Gateway) pour répondre à un administrateur situé dans un autre réseau.
 
 ```bash
+configure terminal
+
+! Configurer l'IP de gestion
 interface vlan 1
  ip address 192.168.1.10 255.255.255.0
  no shutdown
 exit
-! La passerelle permet au switch de répondre à un admin situé dans un autre réseau
+
+! Configurer la passerelle par défaut (Mode config globale)
 ip default-gateway 192.168.1.254
 
 ```
 
 ### B. Sur un ROUTEUR (Interface Physique)
 
-Le routeur est un équipement de couche 3. Chaque port est un réseau distinct.
+Le routeur est un équipement de couche 3. Chaque port est un réseau distinct et doit être configuré individuellement.
 
 ```bash
+configure terminal
+
 ! Choisir le port physique (ex: GigabitEthernet 0/0/0)
 interface g0/0/0
+ ! Bonne pratique : Toujours mettre une description
  description Vers LAN-Principal
  ip address 192.168.1.1 255.255.255.0
+ 
+ ! Configurer l'IPv6 (Si besoin)
+ ipv6 address 2001:db8:acad:1::1/64
+ 
  ! IMPORTANT : Les ports routeurs sont éteints par défaut !
  no shutdown
 exit
@@ -162,8 +182,22 @@ show ip interface brief
 
 ```
 
-* **Status "Up"** : Couche 1 OK (Câble branché).
-* **Protocol "Up"** : Couche 2 OK (Le routeur voisin parle la même langue).
+* **Status (Couche 1)** :
+* `Up` : Câble branché.
+* `Down` : Câble débranché.
+* `Administratively down` : Interface éteinte (manque le `no shutdown`).
+
+
+* **Protocol (Couche 2)** : `Up` si la communication passe.
+
+### 🔬 Détails d'une interface
+
+Pour voir la description, l'adresse MAC (BIA) et les erreurs.
+
+```bash
+show interfaces g0/0/0
+
+```
 
 ### 🗺️ La Table de Routage (Routeur - L3)
 
