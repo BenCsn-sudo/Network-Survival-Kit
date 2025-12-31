@@ -134,21 +134,31 @@ Le routeur est un équipement de couche 3. Chaque port est un réseau distinct e
 ```bash
 configure terminal
 
+! Activer le routage IPv6 (Obligatoire pour qu'il route !)
+ipv6 unicast-routing
+
 ! Choisir le port physique (ex: GigabitEthernet 0/0/0)
 interface g0/0/0
  ! Bonne pratique : Toujours mettre une description
  description Vers LAN-Principal
+ 
+ ! --- Configuration IPv4 ---
  ip address 192.168.1.1 255.255.255.0
  
- ! Configurer l'IPv6 (Si besoin)
+ ! --- Configuration IPv6 ---
+ ! Adresse Unicast Globale (GUA) - Routable sur Internet
  ipv6 address 2001:db8:acad:1::1/64
+ 
+ ! Adresse Link-Local (LLA) - Communication locale uniquement
+ ! Astuce : On la fixe manuellement (fe80::1) pour qu'elle soit facile à retenir
+ ! sinon le routeur en génère une longue et compliquée à partir de l'adresse MAC.
+ ipv6 address fe80::1 link-local
  
  ! IMPORTANT : Les ports routeurs sont éteints par défaut !
  no shutdown
 exit
 
 ```
-
 ---
 
 ## 6. Gestion de la Sauvegarde (RAM vs NVRAM) 💾
