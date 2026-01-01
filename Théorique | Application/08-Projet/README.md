@@ -43,8 +43,8 @@ Calcul des adresses réseaux, des plages d'adresses IP utilisables et des adress
 
 Ce dossier contient les fichiers suivants pour suivre l'évolution du projet :
 
-* 📄 **[Sujet-TP.pdf](https://www.google.com/search?q=./11.5.5-packet-tracer---subnet-an-ipv4-network_fr-FR.pdf)** : L'énoncé complet avec la table d'adressage à compléter.
-* 🌐 **[Maquette-Origine](https://www.google.com/search?q=./Maquette-Origine.pkt)** : Le fichier Packet Tracer initial (périphériques non configurés).
-* ✅ **[Maquette-Finale](https://www.google.com/search?q=./Maquette-Finale.pkt)** : Le fichier Packet Tracer finalisé avec adressage complet et connectivité validée.
+* 📄 **[Sujet-TP.pdf](Sujet.pdf)** : L'énoncé complet avec la table d'adressage à compléter.
+* 🌐 **[Maquette-Origine](Maquette-Origine.pka)** : Le fichier Packet Tracer initial (périphériques non configurés).
+* ✅ **[Maquette-Finale](Maquette-Finale.pka)** : Le fichier Packet Tracer finalisé avec adressage complet et connectivité validée.
 
 ---
