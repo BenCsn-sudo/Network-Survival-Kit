@@ -119,12 +119,12 @@ Le subnetting classique coupe le gâteau en parts égales. Le VLSM coupe des par
 
 ```mermaid
 graph TD
-    Root[Réseau 192.168.1.0/24<br>256 IP] --> A[Sous-Réseau A<br>100 Hôtes<br>/25 (128 IP)]
-    Root --> Free1[Espace Libre<br>128 IP]
-    Free1 --> B[Sous-Réseau B<br>20 Hôtes<br>/27 (32 IP)]
-    Free1 --> Free2[Espace Libre<br>96 IP]
-    Free2 --> C[Liaison WAN<br>2 IP<br>/30 (4 IP)]
-    Free2 --> D[Reste libre...]
+    Root["Réseau 192.168.1.0/24<br>256 IP"] --> A["Sous-Réseau A<br>100 Hôtes<br>/25 (128 IP)"]
+    Root --> Free1["Espace Libre<br>128 IP"]
+    Free1 --> B["Sous-Réseau B<br>20 Hôtes<br>/27 (32 IP)"]
+    Free1 --> Free2["Espace Libre<br>96 IP"]
+    Free2 --> C["Liaison WAN<br>2 IP<br>/30 (4 IP)"]
+    Free2 --> D["Reste libre..."]
     
     style Root fill:#f9f,stroke:#333
     style A fill:#bbf,stroke:#333
