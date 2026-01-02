@@ -126,10 +126,16 @@ graph TD
     Free2 --> C["Liaison WAN<br>2 IP<br>/30 (4 IP)"]
     Free2 --> D["Reste libre..."]
     
-    style Root fill:#f9f,stroke:#333
-    style A fill:#bbf,stroke:#333
-    style B fill:#bbf,stroke:#333
-    style C fill:#bbf,stroke:#333
+    %% Styles avec couleur de texte forcée en NOIR pour la lisibilité
+    style Root fill:#f9f,stroke:#333,stroke-width:2px,color:black
+    style A fill:#bbf,stroke:#333,stroke-width:2px,color:black
+    style B fill:#bbf,stroke:#333,stroke-width:2px,color:black
+    style C fill:#bbf,stroke:#333,stroke-width:2px,color:black
+    
+    %% Style pour l'espace libre (Fond blanc, texte noir, bordure pointillée)
+    style Free1 fill:#fff,stroke:#333,stroke-dasharray: 5 5,color:black
+    style Free2 fill:#fff,stroke:#333,stroke-dasharray: 5 5,color:black
+    style D fill:#fff,stroke:#333,stroke-dasharray: 5 5,color:black
 
 ```
 
