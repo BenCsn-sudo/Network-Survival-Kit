@@ -1,0 +1,80 @@
+Voici une proposition de `README.md` pour ta deuxième étude de cas IPv6, adaptée au dossier `09-Projet`. Ce projet se distingue du précédent car il utilise le **Mode Physique** (PTPM) de Packet Tracer et introduit le concept d'auto-configuration **SLAAC**.
+
+---
+
+# 📂 Étude de Cas n°2 : Configuration IPv6 en Mode Physique (PTPM)
+
+> 
+> **Module 12.9.2** : Cette activité approfondit la configuration manuelle des adresses IPv6 et l'observation de l'auto-configuration sans état (**SLAAC**) sur un réseau local.
+> 
+> 
+
+## 📝 Contexte du Projet
+
+Contrairement aux labs classiques, cet exercice est réalisé en **Mode Physique** (Packet Tracer Physical Mode), nécessitant le câblage manuel des appareils (R1, S1, PC-A et PC-B). L'accent est mis sur la manipulation des adresses de monodiffusion globale (GUA) et la vérification des groupes de **multidiffusion** (Multicast).
+
+## 🎯 Objectifs de configuration
+
+1. 
+**Mise en place physique** : Câblage de la topologie et configuration de base du routeur et du commutateur .
+
+
+2. 
+**Adressage Statique & Link-Local** : Attribution manuelle des adresses GUA et fixation de l'adresse Link-Local à `fe80::1` pour faciliter la gestion.
+
+
+3. 
+**Activation du Routage & SLAAC** : Observation de la génération automatique d'adresses IPv6 par les hôtes une fois le routage activé sur le routeur .
+
+
+4. 
+**Audit des Groupes Multicast** : Vérification de l'appartenance aux groupes `FF02::1` (tous les nœuds) et `FF02::2` (tous les routeurs).
+
+
+
+## ⚙️ Logique Technique & Commandes Clés
+
+### Pourquoi utiliser la même Link-Local sur plusieurs interfaces ?
+
+Une particularité d'IPv6 apprise dans ce lab est que les paquets avec une adresse **Link-Local** ne quittent jamais le réseau local. Par conséquent, il est tout à fait possible (et recommandé pour simplifier la configuration des passerelles) d'utiliser la même adresse `fe80::1` sur toutes les interfaces Ethernet d'un routeur.
+
+### Commandes de vérification indispensables
+
+* 
+**Vérifier les groupes de multidiffusion** : Pour s'assurer que le routeur annonce bien sa présence (via le groupe `FF02::2`).
+
+
+```bash
+R1# show ipv6 interface g0/0/0
+
+```
+
+
+* 
+**Vérifier la configuration de gestion du commutateur (SVI)**:
+
+
+```bash
+S1# show ipv6 interface vlan 1
+
+```
+
+
+
+### Observation du SLAAC
+
+Une fois la commande `ipv6 unicast-routing` entrée sur le routeur, les PC reçoivent automatiquement le préfixe de routage global et l'ID de sous-réseau via des messages d'annonce de routeur (RA).
+
+## 📁 Fichiers du projet
+
+* 📄 **[Instructions_IPv6_Physique.pdf](https://www.google.com/search?q=./12.9.2-packet-tracer---configure-ipv6-addresses-on-network-devices---physical-mode_fr-FR.pdf)** : Guide complet pour le mode physique.
+
+
+* 💻 **[Maquette_Initiale_Physique.pkt](https://www.google.com/search?q=./Initial_Lab_12-9-2.pkt)** : Topologie en mode physique prête pour le câblage.
+* ✅ **[Maquette_Finale_Physique.pkt](https://www.google.com/search?q=./Final_Lab_12-9-2.pkt)** : Lab terminé avec connectivité de bout en bout vérifiée (ping et traceroute).
+
+
+
+---
+
+Souhaites-tu que j'ajoute une petite section "Dépannage Rapide" basée sur les erreurs courantes rencontrées lors de la saisie d'adresses IPv6 (comme l'oubli de supprimer une adresse erronée)?
