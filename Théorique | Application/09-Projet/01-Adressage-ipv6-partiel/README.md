@@ -33,6 +33,6 @@ R1# show ipv6 interface brief
 
 ## 📁 Fichiers du projet
 
-* 📄 **[Instructions_IPv6.pdf](https://www.google.com/search?q=./12.6.6-packet-tracer---configure-ipv6-addressing_fr-FR.pdf)** : Guide officiel détaillé des étapes de configuration.
-* 💻 **[Maquette_Initiale.pkt](https://www.google.com/search?q=./Initial_Lab_12-6-6.pkt)** : Topologie vierge fournie au début de l'étude.
-* ✅ **[Maquette_Finale_TERMINEE.pkt](https://www.google.com/search?q=./Final_Lab_12-6-6.pkt)** : Résultat final avec connectivité 100% opérationnelle.
+* 📄 **[Instructions_IPv6.pdf](Sujet.pdf)** : Guide officiel détaillé des étapes de configuration.
+* 💻 **[Maquette_Initiale.pkt](Maquette-Origine.pka)** : Topologie vierge fournie au début de l'étude.
+* ✅ **[Maquette_Finale_TERMINEE.pkt](Maquette-Finale.pka)** : Résultat final avec connectivité 100% opérationnelle.
