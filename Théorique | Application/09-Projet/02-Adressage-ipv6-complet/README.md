@@ -38,6 +38,6 @@ Une fois la commande `ipv6 unicast-routing` entrée sur le routeur, les PC reço
 
 ## 📁 Fichiers du projet
 
-* 📄 **[Instructions_IPv6_Physique.pdf](https://www.google.com/search?q=./12.9.2-packet-tracer---configure-ipv6-addresses-on-network-devices---physical-mode_fr-FR.pdf)** : Guide complet pour le mode physique.
-* 💻 **[Maquette_Initiale_Physique.pkt](https://www.google.com/search?q=./Initial_Lab_12-9-2.pkt)** : Topologie en mode physique prête pour le câblage.
-* ✅ **[Maquette_Finale_Physique.pkt](https://www.google.com/search?q=./Final_Lab_12-9-2.pkt)** : Lab terminé avec connectivité de bout en bout vérifiée (ping et traceroute).
+* 📄 **[Instructions_IPv6_Physique.pdf](Sujet.pdf)** : Guide complet pour le mode physique.
+* 💻 **[Maquette_Initiale_Physique.pkt](Maquette-Origine.pka)** : Topologie en mode physique prête pour le câblage.
+* ✅ **[Maquette_Finale_Physique.pkt](Maquette-Finale.pka)** : Lab terminé avec connectivité de bout en bout vérifiée (ping et traceroute).
