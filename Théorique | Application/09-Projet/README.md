@@ -8,22 +8,10 @@ Dans cet exercice, l'objectif est de déployer une connectivité IPv6 complète 
 
 ## 🎯 Objectifs de configuration
 
-1. 
-**Activation du routage IPv6** : Activer le transfert de paquets sur le routeur R1.
-
-
-2. 
-**Adressage du Routeur** : Configurer les interfaces GigabitEthernet et Serial avec des adresses globales et locales de liaison.
-
-
-3. 
-**Adressage Hôtes & Serveurs** : Configuration statique des clients et serveurs avec leurs passerelles par défaut respectives.
-
-
-4. 
-**Vérification de connectivité** : Tests de navigation Web et requêtes ICMPv6 vers l'ISP.
-
-
+1. **Activation du routage IPv6** : Activer le transfert de paquets sur le routeur R1.
+2. **Adressage du Routeur** : Configurer les interfaces GigabitEthernet et Serial avec des adresses globales et locales de liaison.
+3. **Adressage Hôtes & Serveurs** : Configuration statique des clients et serveurs avec leurs passerelles par défaut respectives.
+4. **Vérification de connectivité** : Tests de navigation Web et requêtes ICMPv6 vers l'ISP.
 
 ## ⚙️ Logique Technique & Commandes Clés
 
@@ -41,16 +29,10 @@ R1# show ipv6 interface brief
 
 ```
 
-> 
 > **Note sur la modification** : Contrairement à l'IPv4, si vous vous trompez d'adresse en IPv6, vous devez supprimer l'ancienne adresse avec `no ipv6 address [adresse]` car une interface peut posséder plusieurs adresses IPv6 simultanément.
-> 
-> 
 
 ## 📁 Fichiers du projet
 
 * 📄 **[Instructions_IPv6.pdf](https://www.google.com/search?q=./12.6.6-packet-tracer---configure-ipv6-addressing_fr-FR.pdf)** : Guide officiel détaillé des étapes de configuration.
-
-
 * 💻 **[Maquette_Initiale.pkt](https://www.google.com/search?q=./Initial_Lab_12-6-6.pkt)** : Topologie vierge fournie au début de l'étude.
 * ✅ **[Maquette_Finale_TERMINEE.pkt](https://www.google.com/search?q=./Final_Lab_12-6-6.pkt)** : Résultat final avec connectivité 100% opérationnelle.
-
