@@ -132,7 +132,7 @@ Le routeur est un équipement de couche 3. Chaque port est un réseau distinct e
 ```bash
 configure terminal
 
-! [cite_start]Activer le routage IPv6 (INDISPENSABLE pour transmettre les paquets IPv6) [cite: 114, 234]
+! Activer le routage IPv6 (INDISPENSABLE pour transmettre les paquets IPv6)
 ipv6 unicast-routing
 
 ! Choisir le port physique (ex: GigabitEthernet 0/0/0)
