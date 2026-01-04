@@ -26,8 +26,6 @@ Pour rendre les adresses lisibles, on applique ces règles :
 | --- | --- | --- |
 | **GUA** (Global Unicast) | `2001::/3` | Adresse routable sur Internet (équivalent IP publique). |
 | **LLA** (Link-Local) | `fe80::/10` | Indispensable. Utilisée pour communiquer sur un seul lien (LAN).
-
- |
 | **Loopback** | `::1/128` | Test de la pile réseau locale (équivalent `127.0.0.1`). |
 | **Unique Local** | `fc00::/7` | Pour les réseaux internes non routables sur Internet. |
 | **Multicast** | `ff00::/8` | Envoi vers un groupe de machines. |
