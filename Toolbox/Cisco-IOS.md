@@ -65,8 +65,6 @@ C'est le concept le plus important. Une commande ne fonctionne que si l'on est d
 * **`do`** : **L'astuce ultime.** Permet de lancer une commande privilégiée (ping, show) depuis les modes de configuration.
 * *Exemple :* `do show running-config` (alors qu'on est en train de configurer une interface).
 
-
-
 ### 📝 Configuration de base (Le Script type)
 
 À lancer sur tout nouvel équipement (Switch ou Routeur).
@@ -134,7 +132,7 @@ Le routeur est un équipement de couche 3. Chaque port est un réseau distinct e
 ```bash
 configure terminal
 
-! Activer le routage IPv6 (Obligatoire pour qu'il route !)
+! [cite_start]Activer le routage IPv6 (INDISPENSABLE pour transmettre les paquets IPv6) [cite: 114, 234]
 ipv6 unicast-routing
 
 ! Choisir le port physique (ex: GigabitEthernet 0/0/0)
@@ -146,19 +144,22 @@ interface g0/0/0
  ip address 192.168.1.1 255.255.255.0
  
  ! --- Configuration IPv6 ---
- ! Adresse Unicast Globale (GUA) - Routable sur Internet
+ ! [cite_start]Adresse Unicast Globale (GUA) - Routable sur Internet [cite: 119]
  ipv6 address 2001:db8:acad:1::1/64
  
- ! Adresse Link-Local (LLA) - Communication locale uniquement
- ! Astuce : On la fixe manuellement (fe80::1) pour qu'elle soit facile à retenir
- ! sinon le routeur en génère une longue et compliquée à partir de l'adresse MAC.
+ ! [cite_start]Adresse Link-Local (LLA) - Communication locale uniquement [cite: 121, 225]
+ ! On la fixe manuellement (fe80::1) pour faciliter le dépannage
  ipv6 address fe80::1 link-local
+ 
+ ! 💡 Astuce IPv6 : Pour supprimer une adresse erronée, il faut utiliser "no ipv6 address"
+ [cite_start]! sinon l'interface garde l'ancienne ET la nouvelle configurées. [cite: 143, 145]
  
  ! IMPORTANT : Les ports routeurs sont éteints par défaut !
  no shutdown
 exit
 
 ```
+
 ---
 
 ## 6. Gestion de la Sauvegarde (RAM vs NVRAM) 💾
@@ -166,7 +167,9 @@ exit
 | Type | Nom Cisco | Mémoire | Volatile ? | Description |
 | --- | --- | --- | --- | --- |
 | **En cours** | `running-config` | **RAM** | ⚠️ OUI | La config active. Perdue si reboot. |
-| **Démarrage** | `startup-config` | **NVRAM** | ✅ NON | La config stockée sur disque dur. |
+| **Démarrage** | `startup-config` | **NVRAM** | ✅ NON | La config stockée sur disque dur. 
+
+ |
 
 ```bash
 ! Sauvegarder (Copier la RAM vers le Disque)
@@ -188,7 +191,11 @@ C'est ici que tu passes 80% de ton temps.
 La commande la plus utile pour voir si les câbles sont branchés et les IP correctes.
 
 ```bash
+! Pour l'IPv4
 show ip interface brief
+
+! [cite_start]Pour l'IPv6 [cite: 141]
+show ipv6 interface brief
 
 ```
 
@@ -202,10 +209,14 @@ show ip interface brief
 
 ### 🔬 Détails d'une interface
 
-Pour voir la description, l'adresse MAC (BIA) et les erreurs.
+Utile pour voir les adresses MAC (BIA) ou les **groupes de multidiffusion** IPv6 (ex: FF02::1, FF02::2). 
 
 ```bash
+! Détails généraux
 show interfaces g0/0/0
+
+! [cite_start]Détails spécifiques IPv6 (Groupes Multicast, etc.) [cite: 236]
+show ipv6 interface g0/0/0
 
 ```
 
@@ -214,7 +225,11 @@ show interfaces g0/0/0
 Pour voir les réseaux connus par le routeur.
 
 ```bash
+! Pour l'IPv4
 show ip route
+
+! Pour l'IPv6
+show ipv6 route
 
 ```
 
@@ -222,12 +237,16 @@ show ip route
 * `L` : **Local** (L'IP de l'interface elle-même).
 * `S` : **Static** (Route ajoutée manuellement).
 
-### 🔗 La Table ARP (Routeur - L3)
+### 🔗 Table de correspondance adresses (L3 ↔ L2)
 
-Pour voir la correspondance IP ↔ MAC. Indispensable si un Ping échoue dans le LAN.
+Indispensable pour vérifier si le routeur "voit" ses voisins directs.
 
 ```bash
+! Table ARP (IPv4)
 show ip arp
+
+! Table des Voisins (IPv6 - Équivalent de l'ARP)
+show ipv6 neighbors
 
 ```
 
@@ -243,10 +262,13 @@ show mac address-table
 ### 📡 Tester la connectivité (Ping)
 
 ```bash
-! Ping simple
+! Ping IPv4
 ping 192.168.1.1
 
-! Si ça rate (.....) ou (U.U.U) : Vérifier le routage ou les pare-feu.
+! [cite_start]Ping IPv6 [cite: 181, 256, 259]
+ping 2001:db8:1:1::4
+
+! Si ça rate (.....) ou (U.U.U) : Vérifier le routage ou les passerelles (fe80::1).
 ! Si ça marche (!!!!!) : Tout est OK.
 
 ```
