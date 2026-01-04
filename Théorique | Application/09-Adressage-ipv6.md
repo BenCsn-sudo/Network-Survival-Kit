@@ -15,11 +15,8 @@ Pour rendre les adresses lisibles, on applique ces règles :
 1. **Omettre les zéros non significatifs :** Dans chaque segment, on peut supprimer les zéros au début.
 * *Ex:* `0db8` devient `db8`.
 
-
 2. **Le double deux-points (`::`) :** On peut remplacer une suite continue de segments de zéros par `::`.
 * ⚠️ **Attention :** Utilisable **UNE SEULE FOIS** par adresse.
-
-
 
 ---
 
@@ -52,8 +49,6 @@ L'IPv6 a été conçu pour que les machines s'auto-configurent via des messages 
 * **RS (Router Solicitation) :** Le PC demande "Y a-t-il un routeur ?".
 * 
 **RA (Router Advertisement) :** Le routeur répond avec les infos du réseau.
-
-
 
 ### Les 3 Méthodes d'attribution
 
@@ -121,7 +116,3 @@ show ipv6 interface brief
 ```
 
 ---
-
-### Prochaine étape pour toi
-
-Ton repo commence à avoir fière allure ! Étant donné que tu as fini l'IPv6, souhaites-tu que je t'aide à préparer un **petit quiz de révision** sur les conversions hexadécimales et le calcul de sous-réseaux IPv6 pour valider tes acquis ?
