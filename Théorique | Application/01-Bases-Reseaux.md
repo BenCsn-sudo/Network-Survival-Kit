@@ -238,5 +238,3 @@ Chaque machine est reliée à toutes les autres (Full Mesh) ou à plusieurs autr
 ### 🧬 Topologie Hybride
 C'est la réalité du terrain. Internet est un réseau hybride : des étoiles (vos maisons), reliées par des boucles ou des maillages (les opérateurs).
 
----
-*Prochain chapitre : Protocoles, Modèle OSI et Encapsulation !*
