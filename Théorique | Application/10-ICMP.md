@@ -70,8 +70,6 @@ Test de connectivité de bout en bout.
 
 3. **Global Unicast :** Vérifie le routage vers l'extérieur.
 
-
-
 ### B. Traceroute (Analyse du chemin)
 
 Le Traceroute utilise le message **Time Exceeded** pour identifier chaque saut (routeur) sur le trajet.
@@ -81,16 +79,5 @@ Le Traceroute utilise le message **Time Exceeded** pour identifier chaque saut (
 ## 💡 Résumé pour le Dépannage
 
 * **Si Ping échoue mais Traceroute fonctionne :** Un pare-feu bloque probablement les messages Echo mais laisse passer les messages d'erreur de temps.
-* 
-**Pas de RA (Router Advertisement) :** Vérifiez que `ipv6 unicast-routing` est activé sur le routeur.
-
-
+* **Pas de RA (Router Advertisement) :** Vérifiez que `ipv6 unicast-routing` est activé sur le routeur.
 * **Destination Unreachable (Port 3/3) :** Votre configuration IP et de routage est correcte, mais le service distant est arrêté ou bloqué.
-
----
-
-*Basé sur le Module 13 du CCNA - ICMP.*
-
----
-
-Souhaites-tu que je prépare une petite étude de cas pratique "Analyse de pannes" où l'on interprète ensemble différents codes ICMP pour simuler une situation réelle ?
