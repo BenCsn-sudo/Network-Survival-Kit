@@ -22,14 +22,14 @@ En IPv6, ICMP gère la découverte du réseau et remplace le protocole ARP.
 
 * **RS (Router Solicitation) :** Le PC demande la présence d'un routeur sur le segment.
 <p align="center">
-  <img src="./img/RS.png" alt="port" width="400"/>
+  <img src="./img/RS.png" alt="port" width="600"/>
 </p>
 
 ---
 
 * **RA (Router Advertisement) :** Le routeur annonce le préfixe réseau et l'ID de sous-réseau. C'est ce message qui permet l'auto-configuration **SLAAC**.
 <p align="center">
-  <img src="./img/RA.png" alt="port" width="400"/>
+  <img src="./img/RA.png" alt="port" width="600"/>
 </p>
 
 ---
@@ -38,14 +38,14 @@ En IPv6, ICMP gère la découverte du réseau et remplace le protocole ARP.
 
 * **NS (Neighbor Solicitation) :** "Qui a cette adresse IPv6 ?".
 <p align="center">
-  <img src="./img/NS.png" alt="port" width="400"/>
+  <img src="./img/NS.png" alt="port" width="600"/>
 </p>
 
 ---
 
 * **NA (Neighbor Advertisement) :** "C'est moi, voici mon adresse MAC".
 <p align="center">
-  <img src="./img/NA.png" alt="port" width="400"/>
+  <img src="./img/NA.png" alt="port" width="600"/>
 </p>
 
 ---
