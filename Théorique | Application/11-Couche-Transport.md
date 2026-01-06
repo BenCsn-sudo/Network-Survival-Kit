@@ -97,7 +97,3 @@ Il ne contient que 4 champs : Port source, Port destination, Longueur et Checksu
 * **Si l'application est lente :** Regardez du côté de TCP (Taille de fenêtre ou retransmissions dues à des pertes de paquets).
 * **Si la voix est hachée :** C'est UDP qui subit des pertes sur le réseau (pas de retransmission possible).
 * **Bloqué par un Firewall ?** Vérifiez si c'est le **Port** qui est fermé (Couche 4) ou l'**IP** (Couche 3).
-
-
-
-**Souhaites-tu que je te prépare un tableau récapitulatif des numéros de ports les plus courants pour tes futurs examens, ou préfères-tu qu'on passe à l'étude de cas suivante ?**
