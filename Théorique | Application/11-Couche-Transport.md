@@ -61,6 +61,12 @@ Avant d'envoyer la moindre donnée, TCP vérifie que le destinataire est prêt.
 ---
 
 2. **SYN-ACK :** "Oui, je suis prêt !"
+<p align="center">
+  <img src="./img/SYNACK.png" alt="port" width="600"/>
+</p>
+
+---
+
 3. **ACK :** "Super, j'envoie les données." (Acknowledgment)
 
 ### C. Fermeture de session (4-Way Handshake)
