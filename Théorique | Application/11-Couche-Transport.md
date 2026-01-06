@@ -1,4 +1,4 @@
-<img width="970" height="635" alt="image" src="https://github.com/user-attachments/assets/45e038e3-0183-4da2-8ed3-0b7b6cd327db" /># 11 - La Couche Transport (Layer 4) 🚂
+# 11 - La Couche Transport (Layer 4) 🚂
 
 > **Rôle :** Assurer la communication de bout en bout entre les applications. Elle segmente les données reçues de la couche application et les prépare pour le transport sur le réseau.
 
