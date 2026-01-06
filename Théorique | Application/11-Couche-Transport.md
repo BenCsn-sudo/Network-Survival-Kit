@@ -111,8 +111,6 @@ Il ne contient que 4 champs : Port source, Port destination, Longueur et Checksu
 * **Faible latence :** Vital pour la voix ou la vidéo où un petit "glitch" vaut mieux qu'une pause de 2 secondes pour attendre une retransmission.
 * **Transactions rapides :** Comme le DNS (une requête, une réponse).
 
-> **Protocole qui l'utilise :** DNS - VoIP - SNMP - TFTP - Vidéoconférence
-
 ---
 
 ## 💡 Résumé pour le Dépannage
