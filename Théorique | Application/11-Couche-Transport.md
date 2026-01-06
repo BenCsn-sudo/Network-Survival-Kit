@@ -68,6 +68,9 @@ Avant d'envoyer la moindre donnée, TCP vérifie que le destinataire est prêt.
 ---
 
 3. **ACK :** "Super, j'envoie les données." (Acknowledgment)
+<p align="center">
+  <img src="./img/ACK.png" alt="port" width="600"/>
+</p>
 
 ### C. Fermeture de session (4-Way Handshake)
 
