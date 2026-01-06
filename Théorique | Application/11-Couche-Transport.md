@@ -1,4 +1,4 @@
-# 11 - La Couche Transport (Layer 4) 🚂
+<img width="970" height="635" alt="image" src="https://github.com/user-attachments/assets/45e038e3-0183-4da2-8ed3-0b7b6cd327db" /># 11 - La Couche Transport (Layer 4) 🚂
 
 > **Rôle :** Assurer la communication de bout en bout entre les applications. Elle segmente les données reçues de la couche application et les prépare pour le transport sur le réseau.
 
@@ -89,9 +89,12 @@ C'est ici que TCP gère les problèmes sans que l'utilisateur ne s'en aperçoive
 * **Accusés de réception (ACK) :** Si l'émetteur ne reçoit pas d'ACK pour un segment, il le **retransmet** automatiquement.
 * **Taille de la fenêtre (Window Size) :** C'est le nombre d'octets que l'émetteur peut envoyer avant d'attendre un ACK.
 * **Contrôle de flux :** Si le destinataire est débordé, il demande une fenêtre plus petite pour ralentir le débit.
-
-
 * **MSS (Maximum Segment Size) :** La taille maximale de données que le segment peut contenir.
+
+**Exemple :**
+<p align="center">
+  <img src="./img/FEN.png" alt="port" width="600"/>
+</p>
 
 ---
 
