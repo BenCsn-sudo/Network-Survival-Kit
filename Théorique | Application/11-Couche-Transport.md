@@ -1,9 +1,3 @@
-Félicitations pour avoir terminé le **Module 14** ! C'est ici que l'on comprend vraiment comment les données sont découpées et surtout comment on garantit qu'elles arrivent sans erreur. La couche transport est le "chef d'orchestre" de la communication de bout en bout.
-
-Comme c'est un gros morceau, on crée un nouveau fichier dédié : **`11-Couche-Transport.md`**.
-
----
-
 # 11 - La Couche Transport (Layer 4) 🚂
 
 > **Rôle :** Assurer la communication de bout en bout entre les applications. Elle segmente les données reçues de la couche application et les prépare pour le transport sur le réseau.
@@ -104,10 +98,6 @@ Il ne contient que 4 champs : Port source, Port destination, Longueur et Checksu
 * **Si la voix est hachée :** C'est UDP qui subit des pertes sur le réseau (pas de retransmission possible).
 * **Bloqué par un Firewall ?** Vérifiez si c'est le **Port** qui est fermé (Couche 4) ou l'**IP** (Couche 3).
 
----
 
-*Basé sur le Module 14 du CCNA - Couche Transport.*
-
----
 
 **Souhaites-tu que je te prépare un tableau récapitulatif des numéros de ports les plus courants pour tes futurs examens, ou préfères-tu qu'on passe à l'étude de cas suivante ?**
