@@ -54,6 +54,12 @@ Il contient les numéros de **Séquence** et d'**Accusé de réception** (ACK) q
 Avant d'envoyer la moindre donnée, TCP vérifie que le destinataire est prêt.
 
 1. **SYN :** "Bonjour, on se parle ?" (Synchronize)
+<p align="center">
+  <img src="./img/SYN.png" alt="port" width="600"/>
+</p>
+
+---
+
 2. **SYN-ACK :** "Oui, je suis prêt !"
 3. **ACK :** "Super, j'envoie les données." (Acknowledgment)
 
