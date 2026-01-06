@@ -75,6 +75,9 @@ Avant d'envoyer la moindre donnée, TCP vérifie que le destinataire est prêt.
 ### C. Fermeture de session (4-Way Handshake)
 
 Pour finir proprement : **FIN** → **ACK** → **FIN** → **ACK**.
+<p align="center">
+  <img src="./img/FIN.png" alt="port" width="600"/>
+</p>
 
 ---
 
