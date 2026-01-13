@@ -122,13 +122,8 @@ exit
 
 ### 🌐 DNS & Application
 
-* 
-**`nslookup <nom_domaine>`** : Interroge le serveur DNS pour obtenir l'IP d'un nom.
-
-
+* **`nslookup <nom_domaine>`** : Interroge le serveur DNS pour obtenir l'IP d'un nom.
 * *Exemple :* `nslookup google.com`
-
-
 * **`ipconfig /all`** : Affiche toute la configuration IP, y compris le serveur DNS et le bail DHCP.
 
 ### 🚂 Couche Transport
