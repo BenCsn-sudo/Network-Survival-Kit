@@ -142,12 +142,6 @@ exit
 * **`tracert <IP>`** : Équivalent Windows de `traceroute`. Identifie chaque routeur sur le chemin.
 * *Astuce :* Si le ping vers une IP fonctionne mais pas vers un nom, le problème vient du DNS.
 
-
-
----
-
-*Dernière mise à jour : Janvier 2026 - Focus Couches 4 à 7.*
-
 ---
 
 Souhaites-tu que je prépare une section spécifique sur la **capture de paquets Wireshark** pour illustrer comment ces commandes se traduisent concrètement en segments TCP ou messages DNS ?
