@@ -136,7 +136,3 @@ exit
 * **`ping <IP>`** : Teste l'accessibilité d'un hôte (ICMP Echo).
 * **`tracert <IP>`** : Équivalent Windows de `traceroute`. Identifie chaque routeur sur le chemin.
 * *Astuce :* Si le ping vers une IP fonctionne mais pas vers un nom, le problème vient du DNS.
-
----
-
-Souhaites-tu que je prépare une section spécifique sur la **capture de paquets Wireshark** pour illustrer comment ces commandes se traduisent concrètement en segments TCP ou messages DNS ?
