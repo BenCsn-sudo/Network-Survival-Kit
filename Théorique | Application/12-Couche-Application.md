@@ -100,11 +100,3 @@ Permet d'attribuer automatiquement une IP, un masque et une passerelle aux hôte
 * **Problème DNS ?** Teste avec `ping 8.8.8.8`. Si ça répond mais que `ping google.com` échoue, ton serveur DNS est mal configuré.
 * **Problème Web ?** Vérifie si le port **80** ou **443** est ouvert avec `telnet` ou `nc`.
 * **Mail reçu mais pas envoyé ?** C'est probablement un souci avec le port **25** (SMTP).
-
----
-
-*Basé sur le Module 15 du CCNA - Couche Application.*
-
----
-
-**Souhaites-tu que je t'aide à créer une étude de cas "Journée d'un paquet" où l'on suit une donnée depuis le clic sur un lien (HTTP) jusqu'à sa réception, en passant par DNS et TCP ?**
