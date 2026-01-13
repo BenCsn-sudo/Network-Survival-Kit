@@ -1,9 +1,3 @@
-C'est une étape clé : nous quittons la mécanique interne du réseau (couches 2, 3, 4) pour arriver là où l'utilisateur interagit vraiment.
-
-Voici ton README pour le **Module 15**. Comme pour les précédents, je l'ai structuré pour qu'il soit une référence rapide lors de tes futurs labs ou révisions.
-
----
-
 # 12 - La Couche Application (Layer 7) 🖥️
 
 > **Rôle :** Fournir l'interface entre l'utilisateur humain et le réseau. Contrairement aux couches inférieures, elle ne transporte pas la donnée, elle la génère ou l'affiche.
