@@ -1,9 +1,3 @@
-C'est une excellente idée. À mesure que tu avances dans les couches **Transport** et **Application**, ton arsenal d'outils de diagnostic s'élargit. Il est crucial de distinguer les commandes que tu tapes sur l'équipement Cisco de celles que tu tapes sur ton **PC (Invite de commandes)** pour tester le réseau.
-
-Voici ton fichier `Cisco-IOS.md` mis à jour. J'ai ajouté une nouvelle section dédiée aux outils PC (`nslookup`, `netstat`, `tracert`) et enrichi la section de vérification Cisco.
-
----
-
 # 04 - Prise en main de Cisco IOS (CLI)
 
 > **Cisco IOS** (Internetwork Operating System) est le système d'exploitation propriétaire présent sur la majorité des routeurs et switchs Cisco. Il s'utilise en ligne de commande (CLI).
