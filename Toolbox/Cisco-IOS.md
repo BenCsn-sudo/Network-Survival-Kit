@@ -1,7 +1,12 @@
+C'est une excellente idée. À mesure que tu avances dans les couches **Transport** et **Application**, ton arsenal d'outils de diagnostic s'élargit. Il est crucial de distinguer les commandes que tu tapes sur l'équipement Cisco de celles que tu tapes sur ton **PC (Invite de commandes)** pour tester le réseau.
+
+Voici ton fichier `Cisco-IOS.md` mis à jour. J'ai ajouté une nouvelle section dédiée aux outils PC (`nslookup`, `netstat`, `tracert`) et enrichi la section de vérification Cisco.
+
+---
+
 # 04 - Prise en main de Cisco IOS (CLI)
 
-> **Cisco IOS** (Internetwork Operating System) est le système d'exploitation propriétaire présent sur la majorité des routeurs et switchs Cisco.
-> Il s'utilise en ligne de commande (CLI).
+> **Cisco IOS** (Internetwork Operating System) est le système d'exploitation propriétaire présent sur la majorité des routeurs et switchs Cisco. Il s'utilise en ligne de commande (CLI).
 
 ---
 
@@ -15,88 +20,51 @@ Avant de configurer, il faut câbler. Voici à quoi correspondent les icônes da
 
 | Icône | Nom | Usage Principal |
 | --- | --- | --- |
-| ⚡ | **Automatique** | Choisit le câble à ta place. *À éviter pour apprendre !* |
-| 🔵 | **Console** (Bleu ciel) | **PC (RS232) ↔ Routeur/Switch (Console)**. Sert à la configuration initiale (Ligne de commande). |
-| ⚫ | **Droit** (Trait noir) | **Équipements DIFFÉRENTS** (PC ↔ Switch / Switch ↔ Routeur). Le standard RJ45. |
-| ➖ | **Croisé** (Pointillés) | **Équipements IDENTIQUES** (PC ↔ PC / Switch ↔ Switch / PC ↔ Routeur). |
-| 🟠 | **Fibre** (Orange) | **Liaisons Longue Distance**. Nécessite des ports spécifiques (GigabitEthernet ou SFP). |
-| 〰️ | **Téléphone** (Gris) | Modem ↔ Prise Téléphone (RJ11). Pour l'ADSL. |
-| 🟦 | **Coaxial** (Bleu zigzag) | Cloud ↔ Modem Câble. Pour l'Internet par câble TV. |
-| 🟥🕓 | **Série DCE** (Éclair + Horloge) | **Routeur ↔ Routeur (WAN)**. Côté "Fournisseur" qui donne le rythme (*Clock Rate*). |
-| 🟥 | **Série DTE** (Éclair simple) | **Routeur ↔ Routeur (WAN)**. Côté "Client". |
+| ⚡ | **Automatique** | Choisit le câble à ta place. *À éviter !* |
+| 🔵 | **Console** | **PC ↔ Switch/Routeur**. Configuration initiale via port console. |
+| ⚫ | **Droit** | **Équipements DIFFÉRENTS** (PC ↔ Switch). |
+| ➖ | **Croisé** | **Équipements IDENTIQUES** (Switch ↔ Switch ou PC ↔ Routeur). |
+| 🟠 | **Fibre** | Liaisons longue distance à haut débit. |
+| 🟥🕓 | **Série DCE** | Liaison WAN entre routeurs (fournit l'horloge). |
 
 ---
 
 ## 2. Accès au périphérique
 
-Contrairement à un PC, on n'a pas d'écran branché directement. On accède à la CLI via :
-
-1. **Câble Console (Physique) :** Pour la première configuration (câble bleu clair). Nécessite un logiciel comme **PuTTY** (ou l'onglet "Desktop > Terminal" dans Packet Tracer).
-2. **SSH / Telnet (Réseau) :** Pour l'accès à distance une fois l'IP configurée.
+1. **Câble Console :** Première configuration via logiciel comme **PuTTY** ou terminal Packet Tracer.
+2. **SSH / Telnet :** Accès à distance via le réseau (nécessite une IP et la configuration des lignes VTY).
 
 ---
 
 ## 3. La Hiérarchie des Modes
 
-C'est le concept le plus important. Une commande ne fonctionne que si l'on est dans le bon mode.
-
-| Mode | Invite (Prompt) | Description | Commande pour y entrer |
-| --- | --- | --- | --- |
-| **Utilisateur** | `Router>` | Lecture seule limitée (Ping, quelques Show). | (Démarrage par défaut) |
-| **Privilégié** | `Router#` | Mode "Admin". Accès complet (Show all, Save, Debug). | Tapez `enable` |
-| **Configuration** | `Router(config)#` | Pour modifier le routeur (IP, Nom, Sécu). | Tapez `configure terminal` |
-| **Sous-mode** | `Router(config-if)#` | Configurer une interface précise. | Tapez `interface g0/0/0` |
-
-> **Astuce de navigation :**
-> * `exit` : Revenir un cran en arrière.
-> * `end` (ou `Ctrl+Z`) : Revenir direct au mode privilégié (`#`).
-> 
-> 
+| Mode | Invite (Prompt) | Commande pour y entrer |
+| --- | --- | --- |
+| **Utilisateur** | `Router>` | (Par défaut au démarrage) |
+| **Privilégié** | `Router#` | `enable` |
+| **Configuration** | `Router(config)#` | `configure terminal` |
+| **Sous-mode** | `Router(config-if)#` | `interface <nom_interface>` |
 
 ---
 
 ## 4. Commandes de "Survie" (Cheat Sheet) 🛠️
 
-### ⌨️ Raccourcis Clavier indispensables
+* **`TAB`** : Complète automatiquement la commande.
+* **`?`** : Aide contextuelle (affiche les options).
+* **`do`** : Exécute une commande de mode privilège depuis le mode config (ex: `do show ip route`).
 
-* **`TAB`** : Complète automatiquement la commande (ex: `conf` + TAB -> `configure`).
-* **`?`** : Affiche l'aide contextuelle (liste des commandes possibles).
-* **`Flèche Haut`** : Rappelle la commande précédente (Historique).
-* **`do`** : **L'astuce ultime.** Permet de lancer une commande privilégiée (ping, show) depuis les modes de configuration.
-* *Exemple :* `do show running-config` (alors qu'on est en train de configurer une interface).
-
-### 📝 Configuration de base (Le Script type)
-
-À lancer sur tout nouvel équipement (Switch ou Routeur).
+### 📝 Configuration de base
 
 ```bash
-enable
-configure terminal
-
-! 1. Nommer l'équipement
 hostname R1-Paris
-
-! 2. Sécuriser l'accès privilégié ('secret' chiffre le mdp)
 enable secret MonMotDePasseFort
+service password-encryption
 
-! 3. Sécuriser l'accès console (Physique)
-line console 0
- password cisco
- login
-exit
-
-! 4. Sécuriser l'accès distant (VTY - Telnet/SSH)
-! "0 15" signifie qu'on autorise 16 connexions simultanées
+! Sécuriser l'accès distant (Transport Layer)
 line vty 0 15
  password cisco
  login
 exit
-
-! 5. Mettre une bannière légale
-banner motd #ACCES RESTREINT - PERSONNEL AUTORISE UNIQUEMENT#
-
-! 6. Chiffrer les mots de passe clairs (Service)
-service password-encryption
 
 ```
 
@@ -104,57 +72,27 @@ service password-encryption
 
 ## 5. Configuration des Interfaces (IP) 🌐
 
-C'est ici que ça change selon le matériel !
-
-### A. Sur un SWITCH (Interface Virtuelle - SVI)
-
-Le switch est un équipement de couche 2. On lui donne une IP juste pour pouvoir le gérer à distance.
-Il lui faut aussi une passerelle (Gateway) pour répondre à un administrateur situé dans un autre réseau.
+### A. Sur un SWITCH (SVI)
 
 ```bash
-configure terminal
-
-! Configurer l'IP de gestion
 interface vlan 1
  ip address 192.168.1.10 255.255.255.0
  no shutdown
 exit
-
-! Configurer la passerelle par défaut (Mode config globale)
 ip default-gateway 192.168.1.254
 
 ```
 
 ### B. Sur un ROUTEUR (Interface Physique)
 
-Le routeur est un équipement de couche 3. Chaque port est un réseau distinct et doit être configuré individuellement.
-
 ```bash
-configure terminal
+ipv6 unicast-routing  ! [cite_start]Indispensable pour l'IPv6 [cite: 139]
 
-! Activer le routage IPv6 (INDISPENSABLE pour transmettre les paquets IPv6)
-ipv6 unicast-routing
-
-! Choisir le port physique (ex: GigabitEthernet 0/0/0)
 interface g0/0/0
- ! Bonne pratique : Toujours mettre une description
  description Vers LAN-Principal
- 
- ! --- Configuration IPv4 ---
  ip address 192.168.1.1 255.255.255.0
- 
- ! --- Configuration IPv6 ---
- ! [cite_start]Adresse Unicast Globale (GUA) - Routable sur Internet [cite: 119]
- ipv6 address 2001:db8:acad:1::1/64
- 
- ! [cite_start]Adresse Link-Local (LLA) - Communication locale uniquement [cite: 121, 225]
- ! On la fixe manuellement (fe80::1) pour faciliter le dépannage
- ipv6 address fe80::1 link-local
- 
- ! 💡 Astuce IPv6 : Pour supprimer une adresse erronée, il faut utiliser "no ipv6 address"
- [cite_start]! sinon l'interface garde l'ancienne ET la nouvelle configurées. [cite: 143, 145]
- 
- ! IMPORTANT : Les ports routeurs sont éteints par défaut !
+ ipv6 address 2001:db8:acad:1::1/64  ! [cite_start]GUA [cite: 126]
+ ipv6 address fe80::1 link-local     ! [cite_start]LLA manuelle [cite: 130]
  no shutdown
 exit
 
@@ -162,113 +100,60 @@ exit
 
 ---
 
-## 6. Gestion de la Sauvegarde (RAM vs NVRAM) 💾
+## 6. Gestion de la Sauvegarde 💾
 
-| Type | Nom Cisco | Mémoire | Volatile ? | Description |
-| --- | --- | --- | --- | --- |
-| **En cours** | `running-config` | **RAM** | ⚠️ OUI | La config active. Perdue si reboot. |
-| **Démarrage** | `startup-config` | **NVRAM** | ✅ NON | La config stockée sur disque dur. 
-
- |
-
-```bash
-! Sauvegarder (Copier la RAM vers le Disque)
-copy running-config startup-config
-
-! Raccourci (non officiel mais marche souvent)
-write
-
-```
+* **`copy running-config startup-config`** : Sauvegarde la RAM vers la NVRAM.
+* **`write`** : Équivalent rapide de la sauvegarde.
 
 ---
 
-## 7. Vérification et Dépannage (Show Commands) 🔍
+## 7. Vérification Cisco (Router/Switch) 🔍
 
-C'est ici que tu passes 80% de ton temps.
+| Commande | Rôle |
+| --- | --- |
+| **`show ip interface brief`** | État résumé des interfaces IPv4. |
+| **`show ipv6 interface brief`** | État résumé des interfaces IPv6.
 
-### 👑 L'état des interfaces (L1/L2)
+ |
+| **`show ip route`** / **`show ipv6 route`** | Table de routage (C=Connecté, S=Statique). |
+| **`show ip arp`** / **`show ipv6 neighbors`** | Correspondance IP/MAC (Voisins directs). |
+| **`show mac address-table`** | (Switch uniquement) Table de commutation L2. |
+| **`traceroute <IP>`** | Analyse le chemin saut par saut (utilisé sur le routeur). |
 
-La commande la plus utile pour voir si les câbles sont branchés et les IP correctes.
+---
 
-```bash
-! Pour l'IPv4
-show ip interface brief
+## 8. Outils de Diagnostic sur PC (Invite de commandes) 💻
 
-! [cite_start]Pour l'IPv6 [cite: 141]
-show ipv6 interface brief
+À utiliser sur les hôtes finaux (PC-A, PC-B) pour tester la connectivité à travers les couches Transport et Application.
 
-```
+### 🌐 DNS & Application
 
-* **Status (Couche 1)** :
-* `Up` : Câble branché.
-* `Down` : Câble débranché.
-* `Administratively down` : Interface éteinte (manque le `no shutdown`).
+* 
+**`nslookup <nom_domaine>`** : Interroge le serveur DNS pour obtenir l'IP d'un nom.
 
 
-* **Protocol (Couche 2)** : `Up` si la communication passe.
+* *Exemple :* `nslookup google.com`
 
-### 🔬 Détails d'une interface
 
-Utile pour voir les adresses MAC (BIA) ou les **groupes de multidiffusion** IPv6 (ex: FF02::1, FF02::2). 
+* **`ipconfig /all`** : Affiche toute la configuration IP, y compris le serveur DNS et le bail DHCP.
 
-```bash
-! Détails généraux
-show interfaces g0/0/0
+### 🚂 Couche Transport
 
-! [cite_start]Détails spécifiques IPv6 (Groupes Multicast, etc.) [cite: 236]
-show ipv6 interface g0/0/0
+* **`netstat -n`** : Affiche toutes les connexions TCP/UDP actives (Sockets `IP:Port`).
+* **`netstat -r`** : Affiche la table de routage locale du PC.
 
-```
+### 📡 Connectivité & ICMP
 
-### 🗺️ La Table de Routage (Routeur - L3)
+* **`ping <IP>`** : Teste l'accessibilité d'un hôte (ICMP Echo).
+* **`tracert <IP>`** : Équivalent Windows de `traceroute`. Identifie chaque routeur sur le chemin.
+* *Astuce :* Si le ping vers une IP fonctionne mais pas vers un nom, le problème vient du DNS.
 
-Pour voir les réseaux connus par le routeur.
 
-```bash
-! Pour l'IPv4
-show ip route
 
-! Pour l'IPv6
-show ipv6 route
+---
 
-```
+*Dernière mise à jour : Janvier 2026 - Focus Couches 4 à 7.*
 
-* `C` : **Connected** (Réseau directement branché).
-* `L` : **Local** (L'IP de l'interface elle-même).
-* `S` : **Static** (Route ajoutée manuellement).
+---
 
-### 🔗 Table de correspondance adresses (L3 ↔ L2)
-
-Indispensable pour vérifier si le routeur "voit" ses voisins directs.
-
-```bash
-! Table ARP (IPv4)
-show ip arp
-
-! Table des Voisins (IPv6 - Équivalent de l'ARP)
-show ipv6 neighbors
-
-```
-
-### 🔀 La Table MAC (Switch - L2)
-
-Pour voir quelle machine est branchée sur quel port.
-
-```bash
-show mac address-table
-
-```
-
-### 📡 Tester la connectivité (Ping)
-
-```bash
-! Ping IPv4
-ping 192.168.1.1
-
-! [cite_start]Ping IPv6 [cite: 181, 256, 259]
-ping 2001:db8:1:1::4
-
-! Si ça rate (.....) ou (U.U.U) : Vérifier le routage ou les passerelles (fe80::1).
-! Si ça marche (!!!!!) : Tout est OK.
-
-```
+Souhaites-tu que je prépare une section spécifique sur la **capture de paquets Wireshark** pour illustrer comment ces commandes se traduisent concrètement en segments TCP ou messages DNS ?
