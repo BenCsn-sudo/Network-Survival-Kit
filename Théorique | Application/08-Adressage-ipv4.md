@@ -77,7 +77,7 @@ On "emprunte" des bits à la partie Hôte pour les donner à la partie Réseau.
 
 ---
 
-## 4. La Méthode du "Nombre Magique" (Calcul rapide) 🚀
+## 4. La Méthode du "Nombre Magique" 🚀
 
 Comment découper sans faire de binaire à chaque fois ?
 
