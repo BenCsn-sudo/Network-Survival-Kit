@@ -113,11 +113,3 @@ Il est conseillé de désactiver les services qui peuvent servir de vecteurs d'a
 
 * `no ip http server` (si l'interface web n'est pas utilisée).
 * `no cdp run` (sur les ports connectés à des réseaux externes).
-
----
-
-*Basé sur le Module 16 du CCNA - Principes fondamentaux de la sécurité.*
-
----
-
-**Souhaites-tu que je te prépare un petit script de configuration "Hardening" complet que tu pourrais utiliser comme base pour tous tes futurs routeurs sur Packet Tracer ?**
