@@ -1,11 +1,3 @@
-C'est une excellente initiative. Le **Module 16** est crucial car la sécurité n'est plus une option en réseau, c'est une fondation.
-
-**Ma recommandation :** Crée un **nouveau fichier** nommé `13-securite-reseau.md` dans ton dossier `Théorique | Application`. La sécurité est un domaine vaste et transverse qui mérite son propre espace pour ne pas polluer les fichiers purement axés sur les protocoles de communication.
-
-Voici ton guide "Cheat Sheet" pour réviser les fondamentaux de la sécurité avant ta certification.
-
----
-
 # 13 - Fondamentaux de la Sécurité Réseau 🛡️
 
 > **Objectif :** Protéger la triade **CIA** (Confidentialité, Intégrité, Disponibilité) des données et des infrastructures contre les menaces internes et externes.
